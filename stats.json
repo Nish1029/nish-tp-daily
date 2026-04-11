@@ -1,12 +1,9 @@
 {
   "date": "2026-04-11",
   "pq": 27,
-  "pqLastSeenOpen": [
-    "b86db10d-fa3e-4bb4-8005-9c272ea361e2",
-    "d9346319-7eac-452c-b903-f271dcaa0cde"
-  ],
-  "pqActions": 10,
-  "newTickets": 3,
-  "total": 13,
-  "updatedAt": "2026-04-11T23:09:07Z"
+  "pqLastSeenOpen": [],
+  "pqActions": 0,
+  "newTickets": 0,
+  "total": 0,
+  "updatedAt": "2026-04-11T23:11:49Z"
 }
