@@ -55,8 +55,10 @@
   "pq": 0,
   "pqLastSeenOpen": [],
   "pqActions": 22,
-  "newTickets": 0,
-  "newTicketIds": [],
-  "total": 22,
-  "updatedAt": "2026-04-11T01:21:29Z"
+  "newTickets": 1,
+  "newTicketIds": [
+    "2451e793-4b81-4249-8e0b-4b56b2a63b53"
+  ],
+  "total": 23,
+  "updatedAt": "2026-04-11T01:38:36Z"
 }
