@@ -867,19 +867,27 @@ async function loadData() {
 
   const today = todayStr();
 
-  // Phase 1: PQ Opens from tracker stats.json (updates every 2 min, no BQ needed)
+  // Phase 1: Today's live counts from tracker stats.json (TP search, updates every 2 min)
   const realtime = await loadRealtimeStats(today);
-  if (realtime?.pq != null) {
+  if (realtime) {
     const syncTime = new Date(realtime.updatedAt).toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'});
-    document.getElementById('queueCount').textContent = realtime.pq;
-    document.getElementById('queueSub').textContent = 'Tickets reopened in your PQ today';
-    document.getElementById('typeUpdated').textContent = `PQ synced at ${syncTime}`;
-    dayHistory[today] = { queue: realtime.pq };
+    document.getElementById('queueCount').textContent     = realtime.pq ?? '—';
+    document.getElementById('pqActionsCount').textContent = realtime.pqActions ?? '—';
+    document.getElementById('newCount').textContent       = realtime.newTickets ?? '—';
+    document.getElementById('totalCount').textContent     = realtime.total ?? '—';
+    document.getElementById('typeUpdated').textContent    = `Synced from TP at ${syncTime}`;
+    document.getElementById('queueSub').textContent       = 'Tickets reopened in your PQ today';
+    dayHistory[today] = { queue: realtime.pq, pqActions: realtime.pqActions, newTickets: realtime.newTickets, total: realtime.total };
+    await loadHistoryJson();
+    renderSidebar();
+    btn.classList.remove('spinning');
+    btn.textContent = '↻ Refresh';
+    // Load BQ in background for type breakdown and historical sidebar data
+    loadBqBackground(today);
+    return;
   }
-  await loadHistoryJson();
-  renderSidebar();
 
-  // Phase 2: BQ for pqActions / newTickets / types / history
+  // Fallback: if stats.json not available, try BQ directly
   const authed = await ensureBqAuth();
   if (!authed) {
     btn.classList.remove('spinning');
@@ -929,6 +937,7 @@ async function loadData() {
     }
   });
 
+  await loadHistoryJson();
   renderTypeBreakdown(types);
   renderSidebar();
 
@@ -939,6 +948,36 @@ async function loadData() {
 
   btn.classList.remove('spinning');
   btn.textContent = '↻ Refresh';
+}
+
+async function loadBqBackground(today) {
+  // Background BQ load: type breakdown for today + historical sidebar data
+  try {
+    const authed = await ensureBqAuth();
+    if (!authed) return;
+    const [typeData, historyData] = await Promise.allSettled([
+      queryTypeBreakdown(today),
+      queryHistory()
+    ]);
+    const types   = typeData.status === 'fulfilled' ? typeData.value : null;
+    const history = historyData.status === 'fulfilled' ? historyData.value : [];
+    if (types) {
+      if (!dayHistory[today]) dayHistory[today] = {};
+      dayHistory[today].types = types;
+      renderTypeBreakdown(types);
+    }
+    (history || []).forEach(row => {
+      const d = row.date;
+      if (d && d !== today) {
+        if (!dayHistory[d]) dayHistory[d] = {};
+        if (dayHistory[d].pqActions  == null) dayHistory[d].pqActions  = row.pqActions;
+        if (dayHistory[d].newTickets == null) dayHistory[d].newTickets = row.newTickets;
+        if (dayHistory[d].total      == null) dayHistory[d].total      = row.total;
+      }
+    });
+    await loadHistoryJson();
+    renderSidebar();
+  } catch(e) { console.warn('[BQ background]', e); }
 }
 
 
