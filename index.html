@@ -831,6 +831,26 @@ async function loadRealtimeStats(today) {
   return null;
 }
 
+async function loadHistoryJson() {
+  // Fetch history.json written by tracker — populates queue (PQ Opens) for past days
+  try {
+    const res = await fetch('/history.json?t=' + Date.now());
+    if (!res.ok) return;
+    const data = await res.json();
+    Object.entries(data).forEach(([date, d]) => {
+      if (!dayHistory[date]) dayHistory[date] = {};
+      // queue (PQ Opens) only comes from history.json — BQ has no record of it
+      dayHistory[date].queue = d.pq;
+      // Fill pqActions/newTickets/total only if not already set by BQ history or realtime
+      if (dayHistory[date].pqActions == null) dayHistory[date].pqActions = d.pqActions;
+      if (dayHistory[date].newTickets == null) dayHistory[date].newTickets = d.newTickets;
+      if (dayHistory[date].total == null) dayHistory[date].total = d.total;
+    });
+  } catch(e) {
+    console.log('[history.json] Not available:', e.message);
+  }
+}
+
 // ── DATA LOADING ──────────────────────────────────────────────
 async function loadData() {
   const btn = document.getElementById('refreshBtn');
@@ -859,6 +879,7 @@ async function loadData() {
     document.getElementById('typeUpdated').textContent = `Synced from TP at ${syncTime}`;
     document.getElementById('queueSub').textContent = 'Tickets reopened in your PQ today';
     dayHistory[today] = { queue: realtime.pq, pqActions: realtime.pqActions, newTickets: realtime.newTickets, total: realtimeTotal };
+    await loadHistoryJson();
     renderSidebar();
     btn.classList.remove('spinning');
     btn.textContent = '↻ Refresh';
@@ -908,9 +929,10 @@ async function loadData() {
 
   (history || []).forEach(row => {
     const d = row.date;
-    if (d && d !== today) dayHistory[d] = dayHistory[d] || { total: row.total, newTickets: row.newTickets };
+    if (d && d !== today) dayHistory[d] = dayHistory[d] || { pqActions: row.total, newTickets: row.newTickets, total: row.total + row.newTickets };
   });
 
+  await loadHistoryJson();
   renderTypeBreakdown(types);
   renderSidebar();
 
@@ -937,8 +959,9 @@ async function loadBqHistory(today) {
     if (types) { dayHistory[today].types = types; renderTypeBreakdown(types); }
     (history || []).forEach(row => {
       const d = row.date;
-      if (d && d !== today) dayHistory[d] = dayHistory[d] || { total: row.total, newTickets: row.newTickets };
+      if (d && d !== today) dayHistory[d] = dayHistory[d] || { pqActions: row.total, newTickets: row.newTickets, total: row.total + row.newTickets };
     });
+    await loadHistoryJson();
     renderSidebar();
   } catch(e) { console.warn('[BQ background]', e); }
 }
@@ -997,14 +1020,21 @@ async function queryActionsToday(today) {
 
 async function queryTypeBreakdown(today) {
   // Action type breakdown — what enforcement actions were taken today
+  // Deduplicate to one row per ticket (latest action) so the sum matches the
+  // headline ticket count rather than the raw action event count.
   const sql = `
-    SELECT
-      action_type,
-      COUNT(*) as cnt
-    FROM \`shopify-dw.base.base__trust_platform_actions\`
-    WHERE user_id = ${TRUST_USER_ID}
-      AND actor_type = 'User'
-      AND DATE(created_at, 'America/Toronto') = '${today}'
+    SELECT action_type, COUNT(*) as cnt
+    FROM (
+      SELECT
+        actionable_id,
+        action_type,
+        ROW_NUMBER() OVER (PARTITION BY actionable_id ORDER BY created_at DESC) AS rn
+      FROM \`shopify-dw.base.base__trust_platform_actions\`
+      WHERE user_id = ${TRUST_USER_ID}
+        AND actor_type = 'User'
+        AND DATE(created_at, 'America/Toronto') = '${today}'
+    )
+    WHERE rn = 1
     GROUP BY 1
     ORDER BY 2 DESC
     LIMIT 10
