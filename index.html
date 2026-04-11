@@ -896,16 +896,15 @@ async function loadData() {
     return;
   }
 
-  const [queueData, newData, totalData, typeData, historyData] = await Promise.allSettled([
+  const [queueData, todayData, typeData, historyData] = await Promise.allSettled([
     queryPersonalQueue(),
-    queryNewTicketsToday(today),
     queryActionsToday(today),
     queryTypeBreakdown(today),
     queryHistory()
   ]);
 
   // Surface first error
-  const allResults = [queueData, newData, totalData, typeData, historyData];
+  const allResults = [queueData, todayData, typeData, historyData];
   const firstErr = allResults.find(r => r.status === 'rejected');
   if (firstErr) {
     const err = firstErr.reason;
@@ -914,22 +913,24 @@ async function loadData() {
     showError(err?.message || JSON.stringify(err?.rawError || err));
   }
 
-  const queue = queueData.status === 'fulfilled' ? queueData.value : null;
-  const newT  = newData.status  === 'fulfilled' ? newData.value  : null;
-  const total = totalData.status === 'fulfilled' ? totalData.value : null;
-  const types = typeData.status === 'fulfilled' ? typeData.value : null;
-  const history = historyData.status === 'fulfilled' ? historyData.value : [];
+  const queue      = queueData.status === 'fulfilled' ? queueData.value : null;
+  const todayCounts = todayData.status === 'fulfilled' ? todayData.value : null;
+  const pqActions  = todayCounts?.pqActions ?? null;
+  const newT       = todayCounts?.newTickets ?? null;
+  const total      = pqActions !== null && newT !== null ? pqActions + newT : null;
+  const types      = typeData.status === 'fulfilled' ? typeData.value : null;
+  const history    = historyData.status === 'fulfilled' ? historyData.value : [];
 
   document.getElementById('queueCount').textContent     = queue !== null ? queue : '—';
-  document.getElementById('pqActionsCount').textContent = '—';
+  document.getElementById('pqActionsCount').textContent = pqActions !== null ? pqActions : '—';
   document.getElementById('newCount').textContent       = newT  !== null ? newT  : '—';
   document.getElementById('totalCount').textContent     = total !== null ? total : '—';
 
-  dayHistory[today] = { queue, newTickets: newT, total, types };
+  dayHistory[today] = { queue, pqActions, newTickets: newT, total, types };
 
   (history || []).forEach(row => {
     const d = row.date;
-    if (d && d !== today) dayHistory[d] = dayHistory[d] || { queue: row.newTickets, pqActions: row.total, newTickets: 0, total: row.total };
+    if (d && d !== today) dayHistory[d] = dayHistory[d] || { pqActions: row.pqActions, newTickets: row.newTickets, total: row.total };
   });
 
   await loadHistoryJson();
@@ -959,7 +960,7 @@ async function loadBqHistory(today) {
     if (types) { dayHistory[today].types = types; renderTypeBreakdown(types); }
     (history || []).forEach(row => {
       const d = row.date;
-      if (d && d !== today) dayHistory[d] = dayHistory[d] || { queue: row.newTickets, pqActions: row.total, newTickets: 0, total: row.total };
+      if (d && d !== today) dayHistory[d] = dayHistory[d] || { pqActions: row.pqActions, newTickets: row.newTickets, total: row.total };
     });
     await loadHistoryJson();
     renderSidebar();
@@ -1006,33 +1007,42 @@ async function queryNewTicketsToday(today) {
 }
 
 async function queryActionsToday(today) {
-  // Enforcement actions taken by user today
+  // Distinct tickets actioned by user today (pq_actions + new_tickets)
   const sql = `
-    SELECT COUNT(*) as cnt
-    FROM \`shopify-dw.base.base__trust_platform_actions\`
-    WHERE user_id = ${TRUST_USER_ID}
-      AND DATE(created_at, 'America/Toronto') = '${today}'
+    WITH user_actions AS (
+      SELECT a.actionable_id AS ticket_id
+      FROM \`shopify-dw.risk.trust_platform_actions_summary\` a
+      WHERE LOWER(a.trust_platform_user_email) = 'nish.jegaindrabalan@shopify.com'
+        AND a.actionable_type = 'Ticket'
+        AND a.is_automated = FALSE
+        AND DATE(a.created_at, 'America/Toronto') = '${today}'
+      GROUP BY 1
+    )
+    SELECT
+      COUNTIF(DATE(t.first_user_assigned_at, 'America/Toronto') < '${today}') AS pq_actions,
+      COUNTIF(DATE(t.first_user_assigned_at, 'America/Toronto') = '${today}' OR t.first_user_assigned_at IS NULL) AS new_tickets
+    FROM user_actions ua
+    LEFT JOIN \`shopify-dw.risk.trust_platform_tickets_summary\` t
+      ON t.trust_platform_report_id = ua.ticket_id
   `;
   const rows = await bqQuery(sql);
-  return parseCount(rows);
+  if (!rows || rows.length === 0) return { pqActions: 0, newTickets: 0 };
+  const row = rows[0];
+  return {
+    pqActions: Number(row.pq_actions ?? row.f?.[0]?.v ?? 0),
+    newTickets: Number(row.new_tickets ?? row.f?.[1]?.v ?? 0)
+  };
 }
 
 async function queryTypeBreakdown(today) {
-  // Action type breakdown — what enforcement actions were taken today
-  // Deduplicate to one row per ticket (latest action) so the sum matches the
-  // headline ticket count rather than the raw action event count.
+  // Action type breakdown — distinct tickets per action type today
   const sql = `
-    SELECT action_type, COUNT(*) as cnt
-    FROM (
-      SELECT
-        actionable_id,
-        action_type,
-        ROW_NUMBER() OVER (PARTITION BY actionable_id ORDER BY created_at DESC) AS rn
-      FROM \`shopify-dw.base.base__trust_platform_actions\`
-      WHERE user_id = ${TRUST_USER_ID}
-        AND DATE(created_at, 'America/Toronto') = '${today}'
-    )
-    WHERE rn = 1
+    SELECT action_type, COUNT(DISTINCT actionable_id) as cnt
+    FROM \`shopify-dw.risk.trust_platform_actions_summary\`
+    WHERE LOWER(trust_platform_user_email) = 'nish.jegaindrabalan@shopify.com'
+      AND actionable_type = 'Ticket'
+      AND is_automated = FALSE
+      AND DATE(created_at, 'America/Toronto') = '${today}'
     GROUP BY 1
     ORDER BY 2 DESC
     LIMIT 10
@@ -1059,35 +1069,39 @@ async function queryTypeBreakdown(today) {
 }
 
 async function queryHistory() {
-  // Last 14 days: actions taken + new tickets assigned per day
+  // Last 14 days: pq_actions (existing queue) + new_tickets per day
   const sql = `
-    WITH actions AS (
-      SELECT DATE(created_at, 'America/Toronto') as day, COUNT(*) as action_count
-      FROM \`shopify-dw.base.base__trust_platform_actions\`
-      WHERE user_id = ${TRUST_USER_ID}
-        AND DATE(created_at, 'America/Toronto') >= DATE_SUB(CURRENT_DATE('America/Toronto'), INTERVAL 14 DAY)
-      GROUP BY 1
+    WITH user_actions AS (
+      SELECT
+        a.actionable_id AS ticket_id,
+        CAST(DATE(a.created_at, 'America/Toronto') AS STRING) AS work_date
+      FROM \`shopify-dw.risk.trust_platform_actions_summary\` a
+      WHERE LOWER(a.trust_platform_user_email) = 'nish.jegaindrabalan@shopify.com'
+        AND a.actionable_type = 'Ticket'
+        AND a.is_automated = FALSE
+        AND DATE(a.created_at, 'America/Toronto') >= DATE_SUB(CURRENT_DATE('America/Toronto'), INTERVAL 14 DAY)
+      GROUP BY 1, 2
     ),
-    tickets AS (
-      SELECT DATE(created_at, 'America/Toronto') as day, COUNT(*) as ticket_count
-      FROM \`shopify-dw.risk.trust_platform_tickets\`
-      WHERE user_id = ${TRUST_USER_ID}
-        AND DATE(created_at, 'America/Toronto') >= DATE_SUB(CURRENT_DATE('America/Toronto'), INTERVAL 14 DAY)
+    day_counts AS (
+      SELECT
+        ua.work_date,
+        COUNTIF(DATE(t.first_user_assigned_at, 'America/Toronto') < PARSE_DATE('%Y-%m-%d', ua.work_date)) AS pq_actions,
+        COUNTIF(DATE(t.first_user_assigned_at, 'America/Toronto') = PARSE_DATE('%Y-%m-%d', ua.work_date) OR t.first_user_assigned_at IS NULL) AS new_tickets
+      FROM user_actions ua
+      LEFT JOIN \`shopify-dw.risk.trust_platform_tickets_summary\` t
+        ON t.trust_platform_report_id = ua.ticket_id
       GROUP BY 1
     )
-    SELECT
-      COALESCE(a.day, t.day) as day,
-      COALESCE(a.action_count, 0) as action_count,
-      COALESCE(t.ticket_count, 0) as ticket_count
-    FROM actions a
-    FULL OUTER JOIN tickets t ON a.day = t.day
+    SELECT work_date AS day, pq_actions, new_tickets, pq_actions + new_tickets AS total
+    FROM day_counts
     ORDER BY 1 DESC
   `;
   const rows = await bqQuery(sql);
   return rows.map(r => ({
     date: r.day?.value ?? r.day ?? r.f?.[0]?.v,
-    total: Number(r.action_count ?? r.f?.[1]?.v ?? 0),
-    newTickets: Number(r.ticket_count ?? r.f?.[2]?.v ?? 0)
+    pqActions: Number(r.pq_actions ?? r.f?.[1]?.v ?? 0),
+    newTickets: Number(r.new_tickets ?? r.f?.[2]?.v ?? 0),
+    total: Number(r.total ?? r.f?.[3]?.v ?? 0)
   }));
 }
 
