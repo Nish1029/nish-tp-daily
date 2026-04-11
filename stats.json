@@ -100,11 +100,8 @@
     "8e69dae1-8b53-4b7d-b730-87078d7e6c3f",
     "1233f4ed-2516-4ade-8852-8d176403b132"
   ],
-  "newTickets": 2,
-  "newTicketIds": [
-    "bad2649e-918b-44dc-9dba-5dcc09bc369a",
-    "2efd0145-0168-48c6-84db-40e2d064a665"
-  ],
-  "total": 9,
+  "newTickets": 0,
+  "newTicketIds": [],
+  "total": 7,
   "updatedAt": "2026-04-11T14:21:42Z"
 }
