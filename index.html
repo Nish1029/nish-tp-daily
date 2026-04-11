@@ -205,7 +205,7 @@
     /* ── STAT CARDS ──────────────────────────────────── */
     .stat-cards {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 12px;
     }
 
@@ -227,9 +227,10 @@
       background: var(--accent);
     }
 
-    .stat-card.queue::before { background: #4a9de8; }
-    .stat-card.new::before { background: var(--accent); }
-    .stat-card.total::before { background: #9b4ae8; }
+    .stat-card.queue::before    { background: #4a9de8; }
+    .stat-card.pqactions::before { background: #f59e0b; }
+    .stat-card.new::before      { background: var(--accent); }
+    .stat-card.total::before    { background: #9b4ae8; }
 
     .stat-label {
       font-size: 11px;
@@ -248,9 +249,10 @@
       font-variant-numeric: tabular-nums;
     }
 
-    .stat-card.queue .stat-value { color: #7ab8f5; }
-    .stat-card.new .stat-value { color: var(--accent); }
-    .stat-card.total .stat-value { color: #c084fc; }
+    .stat-card.queue .stat-value     { color: #7ab8f5; }
+    .stat-card.pqactions .stat-value { color: #fbbf24; }
+    .stat-card.new .stat-value       { color: var(--accent); }
+    .stat-card.total .stat-value     { color: #c084fc; }
 
     .stat-sub {
       font-size: 11px;
@@ -639,19 +641,24 @@
     <!-- Stat Cards -->
     <div class="stat-cards">
       <div class="stat-card queue">
-        <div class="stat-label">Personal Queue</div>
+        <div class="stat-label">PQ Opens</div>
         <div class="stat-value skeleton" id="queueCount" style="width:60px;height:42px;">-</div>
-        <div class="stat-sub" id="queueSub">Open tickets assigned to you</div>
+        <div class="stat-sub" id="queueSub">Unique tickets open in your PQ today</div>
+      </div>
+      <div class="stat-card pqactions">
+        <div class="stat-label">PQ Actions</div>
+        <div class="stat-value skeleton" id="pqActionsCount" style="width:60px;height:42px;">-</div>
+        <div class="stat-sub" id="pqActionsSub">Take Action presses on your PQ tickets</div>
       </div>
       <div class="stat-card new">
-        <div class="stat-label">New Tickets</div>
+        <div class="stat-label">New Ticket</div>
         <div class="stat-value skeleton" id="newCount" style="width:60px;height:42px;">-</div>
-        <div class="stat-sub" id="newSub">Created today</div>
+        <div class="stat-sub" id="newSub">Take Action on tickets outside your PQ</div>
       </div>
       <div class="stat-card total">
         <div class="stat-label">Total Today</div>
         <div class="stat-value skeleton" id="totalCount" style="width:60px;height:42px;">-</div>
-        <div class="stat-sub" id="totalSub">Actions taken today</div>
+        <div class="stat-sub" id="totalSub">PQ Actions + New Ticket</div>
       </div>
     </div>
 
@@ -810,18 +817,16 @@ function clearError() {
   document.getElementById('errorBanner').style.display = 'none';
 }
 
-// ── QUICK.DB REALTIME STATS ───────────────────────────────────
+// ── REALTIME STATS FROM stats.json ───────────────────────────
 async function loadRealtimeStats(today) {
-  // Check quick.db for stats written by the daily tracker (real-time TP data)
+  // Fetch stats.json written by the 15-min background tracker
   try {
-    const rows = await quick.db.collection('tp-realtime-stats')
-      .where({ date: today }).find();
-    if (rows && rows.length > 0) {
-      // Return the most recently updated entry
-      return rows.sort((a, b) => new Date(b.updatedAt) - new Date(a.updatedAt))[0];
-    }
+    const res = await fetch('/stats.json?t=' + Date.now());
+    if (!res.ok) return null;
+    const data = await res.json();
+    if (data.date === today) return data;
   } catch(e) {
-    console.log('[quick.db] No realtime stats:', e.message);
+    console.log('[stats.json] Not available:', e.message);
   }
   return null;
 }
@@ -834,7 +839,7 @@ async function loadData() {
   clearError();
 
   // Remove skeleton classes
-  ['queueCount','newCount','totalCount'].forEach(id => {
+  ['queueCount','pqActionsCount','newCount','totalCount'].forEach(id => {
     const el = document.getElementById(id);
     el.classList.remove('skeleton');
     el.style.cssText = '';
@@ -846,12 +851,14 @@ async function loadData() {
   const realtime = await loadRealtimeStats(today);
   if (realtime) {
     const syncTime = new Date(realtime.updatedAt).toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'});
-    document.getElementById('queueCount').textContent = realtime.pq ?? '—';
-    document.getElementById('newCount').textContent   = realtime.newTickets ?? '—';
-    document.getElementById('totalCount').textContent = realtime.total ?? '—';
+    document.getElementById('queueCount').textContent     = realtime.pq ?? '—';
+    document.getElementById('pqActionsCount').textContent = realtime.pqActions ?? '—';
+    document.getElementById('newCount').textContent       = realtime.newTickets ?? '—';
+    const realtimeTotal = (realtime.pqActions ?? 0) + (realtime.newTickets ?? 0);
+    document.getElementById('totalCount').textContent     = realtimeTotal;
     document.getElementById('typeUpdated').textContent = `Synced from TP at ${syncTime}`;
-    document.getElementById('queueSub').textContent = 'Open tickets assigned to you';
-    dayHistory[today] = { queue: realtime.pq, newTickets: realtime.newTickets, total: realtime.total };
+    document.getElementById('queueSub').textContent = 'Tickets reopened in your PQ today';
+    dayHistory[today] = { queue: realtime.pq, pqActions: realtime.pqActions, newTickets: realtime.newTickets, total: realtimeTotal };
     renderSidebar();
     btn.classList.remove('spinning');
     btn.textContent = '↻ Refresh';
@@ -892,9 +899,10 @@ async function loadData() {
   const types = typeData.status === 'fulfilled' ? typeData.value : null;
   const history = historyData.status === 'fulfilled' ? historyData.value : [];
 
-  document.getElementById('queueCount').textContent = queue !== null ? queue : '—';
-  document.getElementById('newCount').textContent   = newT  !== null ? newT  : '—';
-  document.getElementById('totalCount').textContent = total !== null ? total : '—';
+  document.getElementById('queueCount').textContent     = queue !== null ? queue : '—';
+  document.getElementById('pqActionsCount').textContent = '—';
+  document.getElementById('newCount').textContent       = newT  !== null ? newT  : '—';
+  document.getElementById('totalCount').textContent     = total !== null ? total : '—';
 
   dayHistory[today] = { queue, newTickets: newT, total, types };
 
@@ -1112,19 +1120,21 @@ function selectDay(dateStr) {
   if (dateStr !== todayStr()) {
     const d = dayHistory[dateStr];
     if (d) {
-      // PQ has no historical snapshot — leave the live value showing, update sub-label
-      document.getElementById('queueSub').textContent = 'Current queue (no historical data)';
-      document.getElementById('newCount').textContent = d.newTickets != null ? d.newTickets : '—';
-      document.getElementById('totalCount').textContent = d.total != null ? d.total : '—';
+      document.getElementById('queueCount').textContent     = d.queue != null ? d.queue : '—';
+      document.getElementById('queueSub').textContent       = 'Tickets reopened in PQ that day';
+      document.getElementById('pqActionsCount').textContent = d.pqActions != null ? d.pqActions : '—';
+      document.getElementById('newCount').textContent       = d.newTickets != null ? d.newTickets : '—';
+      document.getElementById('totalCount').textContent     = d.total != null ? d.total : '—';
       renderTypeBreakdown(d.types);
     }
   } else {
     const d = dayHistory[todayStr()];
     if (d) {
-      document.getElementById('queueCount').textContent = d.queue ?? '—';
-      document.getElementById('queueSub').textContent = 'Open tickets assigned to you';
-      document.getElementById('newCount').textContent = d.newTickets ?? '—';
-      document.getElementById('totalCount').textContent = d.total ?? '—';
+      document.getElementById('queueCount').textContent     = d.queue ?? '—';
+      document.getElementById('queueSub').textContent       = 'Tickets reopened in your PQ today';
+      document.getElementById('pqActionsCount').textContent = d.pqActions ?? '—';
+      document.getElementById('newCount').textContent       = d.newTickets ?? '—';
+      document.getElementById('totalCount').textContent     = d.total ?? '—';
       renderTypeBreakdown(d.types);
     }
   }
