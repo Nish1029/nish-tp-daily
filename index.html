@@ -929,7 +929,7 @@ async function loadData() {
 
   (history || []).forEach(row => {
     const d = row.date;
-    if (d && d !== today) dayHistory[d] = dayHistory[d] || { pqActions: row.total, newTickets: row.newTickets, total: row.total + row.newTickets };
+    if (d && d !== today) dayHistory[d] = dayHistory[d] || { queue: row.newTickets, pqActions: row.total, newTickets: 0, total: row.total };
   });
 
   await loadHistoryJson();
@@ -959,7 +959,7 @@ async function loadBqHistory(today) {
     if (types) { dayHistory[today].types = types; renderTypeBreakdown(types); }
     (history || []).forEach(row => {
       const d = row.date;
-      if (d && d !== today) dayHistory[d] = dayHistory[d] || { pqActions: row.total, newTickets: row.newTickets, total: row.total + row.newTickets };
+      if (d && d !== today) dayHistory[d] = dayHistory[d] || { queue: row.newTickets, pqActions: row.total, newTickets: 0, total: row.total };
     });
     await loadHistoryJson();
     renderSidebar();
@@ -1011,7 +1011,6 @@ async function queryActionsToday(today) {
     SELECT COUNT(*) as cnt
     FROM \`shopify-dw.base.base__trust_platform_actions\`
     WHERE user_id = ${TRUST_USER_ID}
-      AND actor_type = 'User'
       AND DATE(created_at, 'America/Toronto') = '${today}'
   `;
   const rows = await bqQuery(sql);
@@ -1031,7 +1030,6 @@ async function queryTypeBreakdown(today) {
         ROW_NUMBER() OVER (PARTITION BY actionable_id ORDER BY created_at DESC) AS rn
       FROM \`shopify-dw.base.base__trust_platform_actions\`
       WHERE user_id = ${TRUST_USER_ID}
-        AND actor_type = 'User'
         AND DATE(created_at, 'America/Toronto') = '${today}'
     )
     WHERE rn = 1
@@ -1066,7 +1064,7 @@ async function queryHistory() {
     WITH actions AS (
       SELECT DATE(created_at, 'America/Toronto') as day, COUNT(*) as action_count
       FROM \`shopify-dw.base.base__trust_platform_actions\`
-      WHERE user_id = ${TRUST_USER_ID} AND actor_type = 'User'
+      WHERE user_id = ${TRUST_USER_ID}
         AND DATE(created_at, 'America/Toronto') >= DATE_SUB(CURRENT_DATE('America/Toronto'), INTERVAL 14 DAY)
       GROUP BY 1
     ),
