@@ -867,28 +867,19 @@ async function loadData() {
 
   const today = todayStr();
 
-  // Check quick.db first — written by the 3pm daily tracker with live TP data
+  // Phase 1: PQ Opens from tracker stats.json (updates every 2 min, no BQ needed)
   const realtime = await loadRealtimeStats(today);
-  if (realtime) {
+  if (realtime?.pq != null) {
     const syncTime = new Date(realtime.updatedAt).toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'});
-    document.getElementById('queueCount').textContent     = realtime.pq ?? '—';
-    document.getElementById('pqActionsCount').textContent = realtime.pqActions ?? '—';
-    document.getElementById('newCount').textContent       = realtime.newTickets ?? '—';
-    const realtimeTotal = (realtime.pqActions ?? 0) + (realtime.newTickets ?? 0);
-    document.getElementById('totalCount').textContent     = realtimeTotal;
-    document.getElementById('typeUpdated').textContent = `Synced from TP at ${syncTime}`;
+    document.getElementById('queueCount').textContent = realtime.pq;
     document.getElementById('queueSub').textContent = 'Tickets reopened in your PQ today';
-    dayHistory[today] = { queue: realtime.pq, pqActions: realtime.pqActions, newTickets: realtime.newTickets, total: realtimeTotal };
-    await loadHistoryJson();
-    renderSidebar();
-    btn.classList.remove('spinning');
-    btn.textContent = '↻ Refresh';
-    // Still load BQ for history + type breakdown in background
-    loadBqHistory(today);
-    return;
+    document.getElementById('typeUpdated').textContent = `PQ synced at ${syncTime}`;
+    dayHistory[today] = { queue: realtime.pq };
   }
+  await loadHistoryJson();
+  renderSidebar();
 
-  // Ensure BigQuery is authorized before querying
+  // Phase 2: BQ for pqActions / newTickets / types / history
   const authed = await ensureBqAuth();
   if (!authed) {
     btn.classList.remove('spinning');
@@ -896,15 +887,13 @@ async function loadData() {
     return;
   }
 
-  const [queueData, todayData, typeData, historyData] = await Promise.allSettled([
-    queryPersonalQueue(),
+  const [todayData, typeData, historyData] = await Promise.allSettled([
     queryActionsToday(today),
     queryTypeBreakdown(today),
     queryHistory()
   ]);
 
-  // Surface first error
-  const allResults = [queueData, todayData, typeData, historyData];
+  const allResults = [todayData, typeData, historyData];
   const firstErr = allResults.find(r => r.status === 'rejected');
   if (firstErr) {
     const err = firstErr.reason;
@@ -913,7 +902,6 @@ async function loadData() {
     showError(err?.message || JSON.stringify(err?.rawError || err));
   }
 
-  const queue      = queueData.status === 'fulfilled' ? queueData.value : null;
   const todayCounts = todayData.status === 'fulfilled' ? todayData.value : null;
   const pqActions  = todayCounts?.pqActions ?? null;
   const newT       = todayCounts?.newTickets ?? null;
@@ -921,19 +909,26 @@ async function loadData() {
   const types      = typeData.status === 'fulfilled' ? typeData.value : null;
   const history    = historyData.status === 'fulfilled' ? historyData.value : [];
 
-  document.getElementById('queueCount').textContent     = queue !== null ? queue : '—';
   document.getElementById('pqActionsCount').textContent = pqActions !== null ? pqActions : '—';
   document.getElementById('newCount').textContent       = newT  !== null ? newT  : '—';
   document.getElementById('totalCount').textContent     = total !== null ? total : '—';
 
-  dayHistory[today] = { queue, pqActions, newTickets: newT, total, types };
+  if (!dayHistory[today]) dayHistory[today] = {};
+  dayHistory[today].pqActions  = pqActions;
+  dayHistory[today].newTickets = newT;
+  dayHistory[today].total      = total;
+  dayHistory[today].types      = types;
 
   (history || []).forEach(row => {
     const d = row.date;
-    if (d && d !== today) dayHistory[d] = dayHistory[d] || { pqActions: row.pqActions, newTickets: row.newTickets, total: row.total };
+    if (d && d !== today) {
+      if (!dayHistory[d]) dayHistory[d] = {};
+      if (dayHistory[d].pqActions  == null) dayHistory[d].pqActions  = row.pqActions;
+      if (dayHistory[d].newTickets == null) dayHistory[d].newTickets = row.newTickets;
+      if (dayHistory[d].total      == null) dayHistory[d].total      = row.total;
+    }
   });
 
-  await loadHistoryJson();
   renderTypeBreakdown(types);
   renderSidebar();
 
@@ -946,26 +941,6 @@ async function loadData() {
   btn.textContent = '↻ Refresh';
 }
 
-async function loadBqHistory(today) {
-  // Background load of BQ history + type breakdown (for sidebar + action breakdown)
-  try {
-    const authed = await ensureBqAuth();
-    if (!authed) return;
-    const [typeData, historyData] = await Promise.allSettled([
-      queryTypeBreakdown(today),
-      queryHistory()
-    ]);
-    const types = typeData.status === 'fulfilled' ? typeData.value : null;
-    const history = historyData.status === 'fulfilled' ? historyData.value : [];
-    if (types) { dayHistory[today].types = types; renderTypeBreakdown(types); }
-    (history || []).forEach(row => {
-      const d = row.date;
-      if (d && d !== today) dayHistory[d] = dayHistory[d] || { pqActions: row.pqActions, newTickets: row.newTickets, total: row.total };
-    });
-    await loadHistoryJson();
-    renderSidebar();
-  } catch(e) { console.warn('[BQ background]', e); }
-}
 
 // ── BQ QUERIES ────────────────────────────────────────────────
 async function bqQuery(sql) {
