@@ -53,13 +53,10 @@
     "c1e08a4b-e854-44ed-93e6-3a2ca02a4d22"
   ],
   "pq": 0,
-  "pqLastSeenOpen": [
-    "9c1ec0f5-74ef-4847-b58a-0d99111f0224",
-    "c2cd539e-bd67-4453-99a6-a21a07f0c910"
-  ],
+  "pqLastSeenOpen": [],
   "pqActions": 22,
   "newTickets": 0,
   "newTicketIds": [],
   "total": 22,
-  "updatedAt": "2026-04-11T01:04:13Z"
+  "updatedAt": "2026-04-11T01:21:29Z"
 }
