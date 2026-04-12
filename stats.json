@@ -2,9 +2,26 @@
   "date": "2026-04-12",
   "pq": 9,
   "pqLastSeenOpen": [],
-  "pqActions": 0,
+  "pqActions": 5,
   "newTickets": 0,
-  "total": 0,
-  "typeBreakdown": [],
-  "updatedAt": "2026-04-12T15:10:54Z"
+  "total": 5,
+  "typeBreakdown": [
+    {
+      "type": "content_removal_and_enable_payouts",
+      "count": 2
+    },
+    {
+      "type": "clear_and_enable_all",
+      "count": 1
+    },
+    {
+      "type": "marked_solved",
+      "count": 1
+    },
+    {
+      "type": "reject_shopify_payments",
+      "count": 1
+    }
+  ],
+  "updatedAt": "2026-04-12T15:14:00Z"
 }
