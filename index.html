@@ -335,6 +335,7 @@
     .bar-fill.color-2 { background: linear-gradient(90deg, #9b4ae8, #7b3ac8); }
     .bar-fill.color-3 { background: linear-gradient(90deg, #e84a6a, #c83a5a); }
     .bar-fill.color-4 { background: linear-gradient(90deg, #e8c44a, #c8a43a); }
+    .bar-fill.color-pending { background: linear-gradient(90deg, #555, #444); }
 
     /* ── CALENDAR ────────────────────────────────────── */
     .calendar { user-select: none; }
@@ -1130,16 +1131,18 @@ function renderTypeBreakdown(types) {
   const total = types.reduce((s, t) => s + t.count, 0);
   el.innerHTML = types.map((t, i) => {
     const pct = total > 0 ? Math.round(t.count / total * 100) : 0;
-    const actionLabels = { false_positive:'False Positive', request_documentation:'Request Docs', suspend_shop:'Suspend Shop', terminate_shop:'Terminate Shop', reinstate_shop:'Reinstate Shop', disable_payments:'Disable Payments', enable_payments:'Enable Payments', due_diligence_lock:'Due Diligence Lock', request_response:'Request Response', disable_checkout:'Disable Checkout', content_removal:'Content Removal', warn_shop:'Warn Shop', marked_solved:'Marked Solved', check_documents_stripe:'Check with Stripe', content_removal_and_enable_payouts:'Content Removal & Enable Payouts', clear_and_enable_all:'Clear & Enable All', reject_shopify_payments:'Reject Shopify Payments', reject_shopify_payments_without_communications:'Reject SP (No Comms)' };
+    const actionLabels = { false_positive:'False Positive', request_documentation:'Request Docs', suspend_shop:'Suspend Shop', terminate_shop:'Terminate Shop', reinstate_shop:'Reinstate Shop', disable_payments:'Disable Payments', enable_payments:'Enable Payments', due_diligence_lock:'Due Diligence Lock', request_response:'Request Response', disable_checkout:'Disable Checkout', content_removal:'Content Removal', warn_shop:'Warn Shop', marked_solved:'Marked Solved', check_documents_stripe:'Check with Stripe', content_removal_and_enable_payouts:'Content Removal & Enable Payouts', clear_and_enable_all:'Clear & Enable All', reject_shopify_payments:'Reject Shopify Payments', reject_shopify_payments_without_communications:'Reject SP (No Comms)', still_open:'Still Open in PQ' };
+    const pendingTypes = new Set(['still_open']);
     const shortName = actionLabels[t.type] || t.type.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    const isPending = pendingTypes.has(t.type);
     return `
-      <div class="ticket-type-item">
+      <div class="ticket-type-item" ${isPending ? 'style="opacity:0.55"' : ''}>
         <div class="ticket-type-row">
           <span class="ticket-type-name" title="${t.type}">${shortName}</span>
           <span class="ticket-type-stats">${t.count} <span style="opacity:.5">(${pct}%)</span></span>
         </div>
         <div class="bar-track">
-          <div class="bar-fill color-${i % 5}" style="width:${pct}%"></div>
+          <div class="bar-fill ${isPending ? 'color-pending' : 'color-' + (i % 5)}" style="width:${pct}%"></div>
         </div>
       </div>
     `;
