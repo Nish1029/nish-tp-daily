@@ -1,12 +1,13 @@
 {
   "date": "2026-04-12",
-  "pq": 18,
+  "pq": 19,
   "pqLastSeenOpen": [
+    "45276794-2ad4-485d-81d6-bfa227102af4",
     "f5a584fc-190b-4743-a7ab-e2915b82a92e"
   ],
-  "pqActions": 7,
+  "pqActions": 9,
   "newTickets": 0,
-  "total": 7,
+  "total": 9,
   "typeBreakdown": [
     {
       "type": "marked_solved",
@@ -17,17 +18,21 @@
       "count": 5
     },
     {
-      "type": "clear_and_enable_all",
-      "count": 1
+      "type": "terminate_without_communications",
+      "count": 2
     },
     {
       "type": "content_removal_and_enable_payouts",
       "count": 1
     },
     {
+      "type": "clear_and_enable_all",
+      "count": 1
+    },
+    {
       "type": "still_open",
-      "count": 2
+      "count": 1
     }
   ],
-  "updatedAt": "2026-04-12T20:27:19Z"
+  "updatedAt": "2026-04-12T20:37:02Z"
 }
