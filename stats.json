@@ -11,7 +11,7 @@
   "total": 13,
   "typeBreakdown": [
     {
-      "type": "unknown",
+      "type": "marked_solved",
       "count": 3
     },
     {
@@ -39,5 +39,5 @@
       "count": 1
     }
   ],
-  "updatedAt": "2026-04-12T00:37:21Z"
+  "updatedAt": "2026-04-12T00:43:05Z"
 }
