@@ -1,10 +1,10 @@
 {
   "date": "2026-04-12",
-  "pq": 24,
+  "pq": 17,
   "pqLastSeenOpen": [],
-  "pqActions": 17,
-  "newTickets": 7,
-  "total": 24,
+  "pqActions": 7,
+  "newTickets": 0,
+  "total": 7,
   "typeBreakdown": [
     {
       "type": "marked_solved",
@@ -21,11 +21,7 @@
     {
       "type": "reject_shopify_payments",
       "count": 1
-    },
-    {
-      "type": "still_open",
-      "count": 7
     }
   ],
-  "updatedAt": "2026-04-12T16:36:11Z"
+  "updatedAt": "2026-04-12T17:03:15Z"
 }
