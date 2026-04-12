@@ -5,19 +5,24 @@
     "b86db10d-fa3e-4bb4-8005-9c272ea361e2",
     "c2cd539e-bd67-4453-99a6-a21a07f0c910",
     "4f827bd1-b45b-446f-970e-c48d04d229bc",
-    "bf981395-ef97-4947-974b-bf1725e36b58",
-    "fd8cb033-aa84-4b88-b550-522719f8d5b6",
-    "13a68587-fc10-4725-a70f-95c6e37bdc89",
-    "337988ea-ac20-4896-b641-5b4a3684de8c"
+    "bf981395-ef97-4947-974b-bf1725e36b58"
   ],
-  "pqActions": 1,
+  "pqActions": 3,
   "newTickets": 0,
-  "total": 1,
+  "total": 3,
   "typeBreakdown": [
+    {
+      "type": "content_removal_and_enable_payouts",
+      "count": 1
+    },
+    {
+      "type": "marked_solved",
+      "count": 1
+    },
     {
       "type": "reject_shopify_payments",
       "count": 1
     }
   ],
-  "updatedAt": "2026-04-12T15:04:07Z"
+  "updatedAt": "2026-04-12T15:07:17Z"
 }
