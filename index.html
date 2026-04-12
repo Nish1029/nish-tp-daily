@@ -1130,7 +1130,7 @@ function renderTypeBreakdown(types) {
   const total = types.reduce((s, t) => s + t.count, 0);
   el.innerHTML = types.map((t, i) => {
     const pct = total > 0 ? Math.round(t.count / total * 100) : 0;
-    const actionLabels = { false_positive:'False Positive', request_documentation:'Request Docs', suspend_shop:'Suspend Shop', terminate_shop:'Terminate Shop', reinstate_shop:'Reinstate Shop', disable_payments:'Disable Payments', enable_payments:'Enable Payments', due_diligence_lock:'Due Diligence Lock', request_response:'Request Response', disable_checkout:'Disable Checkout', content_removal:'Content Removal', warn_shop:'Warn Shop', marked_solved:'Marked Solved' };
+    const actionLabels = { false_positive:'False Positive', request_documentation:'Request Docs', suspend_shop:'Suspend Shop', terminate_shop:'Terminate Shop', reinstate_shop:'Reinstate Shop', disable_payments:'Disable Payments', enable_payments:'Enable Payments', due_diligence_lock:'Due Diligence Lock', request_response:'Request Response', disable_checkout:'Disable Checkout', content_removal:'Content Removal', warn_shop:'Warn Shop', marked_solved:'Marked Solved', check_documents_stripe:'Check with Stripe', content_removal_and_enable_payouts:'Content Removal & Enable Payouts', clear_and_enable_all:'Clear & Enable All', reject_shopify_payments:'Reject Shopify Payments', reject_shopify_payments_without_communications:'Reject SP (No Comms)' };
     const shortName = actionLabels[t.type] || t.type.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
     return `
       <div class="ticket-type-item">
