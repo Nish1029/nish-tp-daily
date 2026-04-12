@@ -4,13 +4,13 @@
   "pqLastSeenOpen": [
     "f5a584fc-190b-4743-a7ab-e2915b82a92e"
   ],
-  "pqActions": 6,
+  "pqActions": 7,
   "newTickets": 0,
-  "total": 6,
+  "total": 7,
   "typeBreakdown": [
     {
       "type": "marked_solved",
-      "count": 10
+      "count": 9
     },
     {
       "type": "check_documents_stripe",
@@ -21,9 +21,13 @@
       "count": 1
     },
     {
+      "type": "content_removal_and_enable_payouts",
+      "count": 1
+    },
+    {
       "type": "still_open",
       "count": 2
     }
   ],
-  "updatedAt": "2026-04-12T20:19:41Z"
+  "updatedAt": "2026-04-12T20:27:19Z"
 }
