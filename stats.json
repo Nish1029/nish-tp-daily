@@ -2,10 +2,14 @@
   "date": "2026-04-12",
   "pq": 9,
   "pqLastSeenOpen": [],
-  "pqActions": 5,
+  "pqActions": 10,
   "newTickets": 0,
-  "total": 5,
+  "total": 10,
   "typeBreakdown": [
+    {
+      "type": "check_documents_stripe",
+      "count": 5
+    },
     {
       "type": "content_removal_and_enable_payouts",
       "count": 2
@@ -23,5 +27,5 @@
       "count": 1
     }
   ],
-  "updatedAt": "2026-04-12T15:20:35Z"
+  "updatedAt": "2026-04-12T15:33:28Z"
 }
