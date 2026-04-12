@@ -1,10 +1,10 @@
 {
   "date": "2026-04-11",
-  "pq": 30,
+  "pq": 31,
   "pqLastSeenOpen": [
+    "9d0c8d13-4b9c-4dc0-8398-9ba070be23a4",
     "c8804323-edf9-4a09-9a71-75e854243dfa",
-    "b86db10d-fa3e-4bb4-8005-9c272ea361e2",
-    "d9346319-7eac-452c-b903-f271dcaa0cde"
+    "b86db10d-fa3e-4bb4-8005-9c272ea361e2"
   ],
   "pqActions": 10,
   "newTickets": 3,
@@ -39,5 +39,5 @@
       "count": 1
     }
   ],
-  "updatedAt": "2026-04-12T00:43:05Z"
+  "updatedAt": "2026-04-12T00:49:28Z"
 }
