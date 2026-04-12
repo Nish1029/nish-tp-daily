@@ -1,38 +1,42 @@
 {
   "date": "2026-04-12",
-  "pq": 19,
+  "pq": 58,
   "pqLastSeenOpen": [
-    "45276794-2ad4-485d-81d6-bfa227102af4",
-    "f5a584fc-190b-4743-a7ab-e2915b82a92e"
+    "6a2b7552-1b9b-4ae5-a188-b4e9433070d6",
+    "83134c56-4f58-4149-8b1b-437fbf933511"
   ],
-  "pqActions": 9,
-  "newTickets": 0,
-  "total": 9,
+  "pqActions": 16,
+  "newTickets": 19,
+  "total": 35,
   "typeBreakdown": [
     {
       "type": "marked_solved",
-      "count": 9
+      "count": 42
     },
     {
       "type": "check_documents_stripe",
-      "count": 5
+      "count": 4
     },
     {
-      "type": "terminate_without_communications",
+      "type": "false_positive",
+      "count": 4
+    },
+    {
+      "type": "clear_and_enable_all",
+      "count": 3
+    },
+    {
+      "type": "reject_shopify_payments",
       "count": 2
     },
     {
       "type": "content_removal_and_enable_payouts",
-      "count": 1
+      "count": 2
     },
     {
-      "type": "clear_and_enable_all",
-      "count": 1
-    },
-    {
-      "type": "still_open",
+      "type": "reject_shopify_payments_without_communications",
       "count": 1
     }
   ],
-  "updatedAt": "2026-04-12T20:37:02Z"
+  "updatedAt": "2026-04-12T22:17:53Z"
 }
