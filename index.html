@@ -651,15 +651,10 @@
         <div class="stat-value skeleton" id="pqActionsCount" style="width:60px;height:42px;">-</div>
         <div class="stat-sub" id="pqActionsSub">Take Action presses on your PQ tickets</div>
       </div>
-      <div class="stat-card new">
-        <div class="stat-label">New Ticket</div>
-        <div class="stat-value skeleton" id="newCount" style="width:60px;height:42px;">-</div>
-        <div class="stat-sub" id="newSub">Take Action on tickets outside your PQ</div>
-      </div>
       <div class="stat-card total">
         <div class="stat-label">Total Today</div>
         <div class="stat-value skeleton" id="totalCount" style="width:60px;height:42px;">-</div>
-        <div class="stat-sub" id="totalSub">PQ Actions + New Ticket</div>
+        <div class="stat-sub" id="totalSub">All PQ Actions today</div>
       </div>
     </div>
 
@@ -763,7 +758,7 @@ let calYear = new Date().getFullYear();
 let calMonth = new Date().getMonth();
 let selectedNoteColor = 'var(--green)';
 let selectedLegendColor = '#4ae887';
-let dayHistory = {}; // { 'YYYY-MM-DD': { queue, newTickets, total, types } }
+let dayHistory = {}; // { 'YYYY-MM-DD': { queue, pqActions, total, types } }
 let notes = [];
 let legendItems = [];
 let loadError = null;
@@ -842,9 +837,8 @@ async function loadHistoryJson() {
       if (!dayHistory[date]) dayHistory[date] = {};
       // queue (PQ Opens) only comes from history.json — BQ has no record of it
       dayHistory[date].queue = d.pq;
-      // Fill pqActions/newTickets/total only if not already set by BQ history or realtime
+      // Fill pqActions/total only if not already set by BQ history or realtime
       if (dayHistory[date].pqActions == null) dayHistory[date].pqActions = d.pqActions;
-      if (dayHistory[date].newTickets == null) dayHistory[date].newTickets = d.newTickets;
       if (dayHistory[date].total == null) dayHistory[date].total = d.total;
     });
   } catch(e) {
@@ -860,7 +854,7 @@ async function loadData() {
   clearError();
 
   // Remove skeleton classes
-  ['queueCount','pqActionsCount','newCount','totalCount'].forEach(id => {
+  ['queueCount','pqActionsCount','totalCount'].forEach(id => {
     const el = document.getElementById(id);
     el.classList.remove('skeleton');
     el.style.cssText = '';
@@ -874,11 +868,10 @@ async function loadData() {
     const syncTime = new Date(realtime.updatedAt).toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'});
     document.getElementById('queueCount').textContent     = realtime.pq ?? '—';
     document.getElementById('pqActionsCount').textContent = realtime.pqActions ?? '—';
-    document.getElementById('newCount').textContent       = realtime.newTickets ?? '—';
     document.getElementById('totalCount').textContent     = realtime.total ?? '—';
     document.getElementById('typeUpdated').textContent    = `Synced from TP at ${syncTime}`;
     document.getElementById('queueSub').textContent       = 'Tickets reopened in your PQ today';
-    dayHistory[today] = { queue: realtime.pq, pqActions: realtime.pqActions, newTickets: realtime.newTickets, total: realtime.total };
+    dayHistory[today] = { queue: realtime.pq, pqActions: realtime.pqActions, total: realtime.total };
     if (realtime.typeBreakdown?.length) {
       dayHistory[today].types = realtime.typeBreakdown;
       renderTypeBreakdown(realtime.typeBreakdown);
@@ -918,18 +911,15 @@ async function loadData() {
 
   const todayCounts = todayData.status === 'fulfilled' ? todayData.value : null;
   const pqActions  = todayCounts?.pqActions ?? null;
-  const newT       = todayCounts?.newTickets ?? null;
-  const total      = pqActions !== null && newT !== null ? pqActions + newT : null;
+  const total      = pqActions !== null ? pqActions : null;
   const types      = typeData.status === 'fulfilled' ? typeData.value : null;
   const history    = historyData.status === 'fulfilled' ? historyData.value : [];
 
   document.getElementById('pqActionsCount').textContent = pqActions !== null ? pqActions : '—';
-  document.getElementById('newCount').textContent       = newT  !== null ? newT  : '—';
   document.getElementById('totalCount').textContent     = total !== null ? total : '—';
 
   if (!dayHistory[today]) dayHistory[today] = {};
   dayHistory[today].pqActions  = pqActions;
-  dayHistory[today].newTickets = newT;
   dayHistory[today].total      = total;
   dayHistory[today].types      = types;
 
@@ -938,7 +928,6 @@ async function loadData() {
     if (d && d !== today) {
       if (!dayHistory[d]) dayHistory[d] = {};
       if (dayHistory[d].pqActions  == null) dayHistory[d].pqActions  = row.pqActions;
-      if (dayHistory[d].newTickets == null) dayHistory[d].newTickets = row.newTickets;
       if (dayHistory[d].total      == null) dayHistory[d].total      = row.total;
     }
   });
@@ -969,7 +958,6 @@ async function loadBqBackground(today) {
       if (d && d !== today) {
         if (!dayHistory[d]) dayHistory[d] = {};
         if (dayHistory[d].pqActions  == null) dayHistory[d].pqActions  = row.pqActions;
-        if (dayHistory[d].newTickets == null) dayHistory[d].newTickets = row.newTickets;
         if (dayHistory[d].total      == null) dayHistory[d].total      = row.total;
       }
     });
@@ -1182,7 +1170,6 @@ function selectDay(dateStr) {
     document.getElementById('queueCount').textContent     = '—';
     document.getElementById('queueSub').textContent       = 'Unique tickets open in your PQ today';
     document.getElementById('pqActionsCount').textContent = '—';
-    document.getElementById('newCount').textContent       = '—';
     document.getElementById('totalCount').textContent     = '—';
     document.getElementById('typeUpdated').textContent    = '';
     renderTypeBreakdown(null);
@@ -1191,7 +1178,6 @@ function selectDay(dateStr) {
     if (d) {
       if (d.queue      != null) document.getElementById('queueCount').textContent     = d.queue;
       if (d.pqActions  != null) document.getElementById('pqActionsCount').textContent = d.pqActions;
-      if (d.newTickets != null) document.getElementById('newCount').textContent       = d.newTickets;
       if (d.total      != null) document.getElementById('totalCount').textContent     = d.total;
       if (d.types?.length) {
         renderTypeBreakdown(d.types);
@@ -1221,7 +1207,6 @@ function selectDay(dateStr) {
       document.getElementById('queueCount').textContent     = d.queue ?? '—';
       document.getElementById('queueSub').textContent       = 'Tickets reopened in your PQ today';
       document.getElementById('pqActionsCount').textContent = d.pqActions ?? '—';
-      document.getElementById('newCount').textContent       = d.newTickets ?? '—';
       document.getElementById('totalCount').textContent     = d.total ?? '—';
       renderTypeBreakdown(d.types);
     }
