@@ -1,27 +1,30 @@
 {
   "date": "2026-04-12",
-  "pq": 15,
+  "pq": 17,
   "pqLastSeenOpen": [],
-  "pqActions": 10,
-  "newTickets": 7,
+  "pqActions": 17,
   "total": 17,
   "typeBreakdown": [
     {
       "type": "marked_solved",
-      "count": 13
+      "count": 8
     },
     {
       "type": "check_documents_stripe",
-      "count": 2
+      "count": 3
     },
     {
       "type": "clear_and_enable_all",
-      "count": 1
+      "count": 3
     },
     {
       "type": "content_removal_and_enable_payouts",
+      "count": 2
+    },
+    {
+      "type": "reject_shopify_payments",
       "count": 1
     }
   ],
-  "updatedAt": "2026-04-12T15:47:28Z"
+  "updatedAt": "2026-04-12T15:56:11Z"
 }
