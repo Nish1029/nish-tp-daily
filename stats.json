@@ -1,20 +1,29 @@
 {
   "date": "2026-04-12",
-  "pq": 58,
+  "pq": 59,
   "pqLastSeenOpen": [
+    "fb6f5f7c-1e11-4045-b48d-5df95dd899f0",
     "6a2b7552-1b9b-4ae5-a188-b4e9433070d6",
     "83134c56-4f58-4149-8b1b-437fbf933511"
   ],
-  "pqActions": 16,
+  "pqActions": 30,
   "newTickets": 19,
-  "total": 35,
+  "total": 49,
   "typeBreakdown": [
     {
       "type": "marked_solved",
-      "count": 42
+      "count": 29
+    },
+    {
+      "type": "request_documentation",
+      "count": 8
     },
     {
       "type": "check_documents_stripe",
+      "count": 7
+    },
+    {
+      "type": "terminate_shop",
       "count": 4
     },
     {
@@ -22,21 +31,25 @@
       "count": 4
     },
     {
-      "type": "clear_and_enable_all",
-      "count": 3
-    },
-    {
       "type": "reject_shopify_payments",
       "count": 2
     },
     {
-      "type": "content_removal_and_enable_payouts",
+      "type": "reject_shopify_payments_without_communications",
       "count": 2
     },
     {
-      "type": "reject_shopify_payments_without_communications",
+      "type": "disable_payments",
+      "count": 1
+    },
+    {
+      "type": "content_removal_and_enable_payouts",
+      "count": 1
+    },
+    {
+      "type": "clear_and_enable_all",
       "count": 1
     }
   ],
-  "updatedAt": "2026-04-12T22:17:53Z"
+  "updatedAt": "2026-04-12T22:32:23Z"
 }
