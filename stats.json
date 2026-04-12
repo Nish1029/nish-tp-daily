@@ -10,13 +10,33 @@
   "total": 13,
   "typeBreakdown": [
     {
-      "type": "shopify_payments_supportability",
-      "count": 8
+      "type": "unknown",
+      "count": 3
     },
     {
-      "type": "shopify_payments_reseller",
-      "count": 5
+      "type": "terminate_without_communications",
+      "count": 3
+    },
+    {
+      "type": "reject_shopify_payments",
+      "count": 2
+    },
+    {
+      "type": "content_removal_and_enable_payouts",
+      "count": 2
+    },
+    {
+      "type": "reject_shopify_payments_without_communications",
+      "count": 1
+    },
+    {
+      "type": "clear_and_enable_all",
+      "count": 1
+    },
+    {
+      "type": "false_positive",
+      "count": 1
     }
   ],
-  "updatedAt": "2026-04-12T00:18:31Z"
+  "updatedAt": "2026-04-12T00:20:18Z"
 }
