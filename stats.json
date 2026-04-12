@@ -1,13 +1,14 @@
 {
   "date": "2026-04-12",
-  "pq": 17,
+  "pq": 24,
   "pqLastSeenOpen": [],
   "pqActions": 17,
-  "total": 17,
+  "newTickets": 7,
+  "total": 24,
   "typeBreakdown": [
     {
       "type": "marked_solved",
-      "count": 9
+      "count": 8
     },
     {
       "type": "check_documents_stripe",
@@ -19,12 +20,12 @@
     },
     {
       "type": "content_removal_and_enable_payouts",
-      "count": 1
+      "count": 2
     },
     {
       "type": "reject_shopify_payments",
       "count": 1
     }
   ],
-  "updatedAt": "2026-04-12T16:04:18Z"
+  "updatedAt": "2026-04-12T16:12:26Z"
 }
