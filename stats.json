@@ -5,27 +5,6 @@
   "pqActions": 10,
   "newTickets": 0,
   "total": 10,
-  "typeBreakdown": [
-    {
-      "type": "check_documents_stripe",
-      "count": 5
-    },
-    {
-      "type": "content_removal_and_enable_payouts",
-      "count": 2
-    },
-    {
-      "type": "clear_and_enable_all",
-      "count": 1
-    },
-    {
-      "type": "marked_solved",
-      "count": 1
-    },
-    {
-      "type": "reject_shopify_payments",
-      "count": 1
-    }
-  ],
-  "updatedAt": "2026-04-12T15:33:28Z"
+  "typeBreakdown": [],
+  "updatedAt": "2026-04-12T15:38:32Z"
 }
