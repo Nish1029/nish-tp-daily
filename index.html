@@ -878,11 +878,16 @@ async function loadData() {
     document.getElementById('typeUpdated').textContent    = `Synced from TP at ${syncTime}`;
     document.getElementById('queueSub').textContent       = 'Tickets reopened in your PQ today';
     dayHistory[today] = { queue: realtime.pq, pqActions: realtime.pqActions, newTickets: realtime.newTickets, total: realtime.total };
+    if (realtime.typeBreakdown?.length) {
+      dayHistory[today].types = realtime.typeBreakdown;
+      renderTypeBreakdown(realtime.typeBreakdown);
+      document.getElementById('typeUpdated').textContent = `Synced from TP at ${syncTime}`;
+    }
     await loadHistoryJson();
     renderSidebar();
     btn.classList.remove('spinning');
     btn.textContent = '↻ Refresh';
-    // Load BQ in background for type breakdown and historical sidebar data
+    // Load BQ in background for historical sidebar data (type breakdown already from stats.json)
     loadBqBackground(today);
     return;
   }
@@ -951,21 +956,13 @@ async function loadData() {
 }
 
 async function loadBqBackground(today) {
-  // Background BQ load: type breakdown for today + historical sidebar data
+  // Background BQ load: historical sidebar data only.
+  // Type breakdown for today comes from stats.json (queryTypeBreakdown returns action types, not report types).
   try {
     const authed = await ensureBqAuth();
     if (!authed) return;
-    const [typeData, historyData] = await Promise.allSettled([
-      queryTypeBreakdown(today),
-      queryHistory()
-    ]);
-    const types   = typeData.status === 'fulfilled' ? typeData.value : null;
+    const [historyData] = await Promise.allSettled([queryHistory()]);
     const history = historyData.status === 'fulfilled' ? historyData.value : [];
-    if (types) {
-      if (!dayHistory[today]) dayHistory[today] = {};
-      dayHistory[today].types = types;
-      renderTypeBreakdown(types);
-    }
     (history || []).forEach(row => {
       const d = row.date;
       if (d && d !== today) {
@@ -977,6 +974,10 @@ async function loadBqBackground(today) {
     });
     await loadHistoryJson();
     renderSidebar();
+    // If user is already viewing a past day that now has data, update the main display
+    if (selectedDate !== today && dayHistory[selectedDate]) {
+      selectDay(selectedDate);
+    }
   } catch(e) { console.warn('[BQ background]', e); }
 }
 
@@ -1129,7 +1130,8 @@ function renderTypeBreakdown(types) {
   const total = types.reduce((s, t) => s + t.count, 0);
   el.innerHTML = types.map((t, i) => {
     const pct = total > 0 ? Math.round(t.count / total * 100) : 0;
-    const shortName = t.type.replace('shopify_payments_', 'sp_').replace(/_/g, ' ');
+    const actionLabels = { false_positive:'False Positive', request_documentation:'Request Docs', suspend_shop:'Suspend Shop', terminate_shop:'Terminate Shop', reinstate_shop:'Reinstate Shop', disable_payments:'Disable Payments', enable_payments:'Enable Payments', due_diligence_lock:'Due Diligence Lock', request_response:'Request Response', disable_checkout:'Disable Checkout', content_removal:'Content Removal', warn_shop:'Warn Shop', marked_solved:'Marked Solved' };
+    const shortName = actionLabels[t.type] || t.type.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
     return `
       <div class="ticket-type-item">
         <div class="ticket-type-row">
@@ -1172,17 +1174,44 @@ function renderSidebar() {
 function selectDay(dateStr) {
   selectedDate = dateStr;
   renderSidebar();
-  // If today, already have data. Otherwise could load historical data.
   if (dateStr !== todayStr()) {
+    // Always reset cards first — prevents stale today values showing when switching to a past day
+    document.getElementById('queueCount').textContent     = '—';
+    document.getElementById('queueSub').textContent       = 'Unique tickets open in your PQ today';
+    document.getElementById('pqActionsCount').textContent = '—';
+    document.getElementById('newCount').textContent       = '—';
+    document.getElementById('totalCount').textContent     = '—';
+    document.getElementById('typeUpdated').textContent    = '';
+    renderTypeBreakdown(null);
+
     const d = dayHistory[dateStr];
     if (d) {
-      document.getElementById('queueCount').textContent     = d.queue != null ? d.queue : '—';
-      document.getElementById('queueSub').textContent       = 'Tickets reopened in PQ that day';
-      document.getElementById('pqActionsCount').textContent = d.pqActions != null ? d.pqActions : '—';
-      document.getElementById('newCount').textContent       = d.newTickets != null ? d.newTickets : '—';
-      document.getElementById('totalCount').textContent     = d.total != null ? d.total : '—';
-      renderTypeBreakdown(d.types);
+      if (d.queue      != null) document.getElementById('queueCount').textContent     = d.queue;
+      if (d.pqActions  != null) document.getElementById('pqActionsCount').textContent = d.pqActions;
+      if (d.newTickets != null) document.getElementById('newCount').textContent       = d.newTickets;
+      if (d.total      != null) document.getElementById('totalCount').textContent     = d.total;
+      if (d.types?.length) {
+        renderTypeBreakdown(d.types);
+      } else {
+        // Lazy-load type breakdown from BQ for this past day
+        document.getElementById('typeUpdated').textContent = 'Loading…';
+        ensureBqAuth().then(ok => {
+          if (!ok) { document.getElementById('typeUpdated').textContent = ''; return; }
+          return queryTypeBreakdown(dateStr);
+        }).then(types => {
+          if (types?.length && selectedDate === dateStr) {
+            d.types = types;
+            renderTypeBreakdown(types);
+            document.getElementById('typeUpdated').textContent = '';
+          } else if (selectedDate === dateStr) {
+            document.getElementById('typeUpdated').textContent = '';
+          }
+        }).catch(() => {
+          if (selectedDate === dateStr) document.getElementById('typeUpdated').textContent = '';
+        });
+      }
     }
+    // If d doesn't exist yet, loadBqBackground will call selectDay again once data arrives
   } else {
     const d = dayHistory[todayStr()];
     if (d) {
