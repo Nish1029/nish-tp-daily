@@ -8,5 +8,15 @@
   "pqActions": 10,
   "newTickets": 3,
   "total": 13,
-  "updatedAt": "2026-04-11T23:57:24Z"
+  "typeBreakdown": [
+    {
+      "type": "shopify_payments_supportability",
+      "count": 8
+    },
+    {
+      "type": "shopify_payments_reseller",
+      "count": 5
+    }
+  ],
+  "updatedAt": "2026-04-12T00:00:00Z"
 }
