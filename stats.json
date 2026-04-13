@@ -1,11 +1,9 @@
 {
   "date": "2026-04-13",
-  "pq": 1,
-  "pqLastSeenOpen": [
-    "ec08f1bd-b6b7-4b15-b7b6-42798368816f"
-  ],
-  "pqActions": 0,
-  "newTickets": 73,
+  "pq": 57,
+  "pqLastSeenOpen": [],
+  "pqActions": 57,
+  "newTickets": 9,
   "total": 73,
   "typeBreakdown": [
     {
@@ -59,11 +57,7 @@
     {
       "type": "email_merchant",
       "count": 1
-    },
-    {
-      "type": "still_open",
-      "count": 1
     }
   ],
-  "updatedAt": "2026-04-13T20:40:47Z"
+  "updatedAt": "2026-04-13T20:23:20Z"
 }
