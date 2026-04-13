@@ -1,10 +1,10 @@
 {
   "date": "2026-04-13",
-  "pq": 58,
+  "pq": 59,
   "pqLastSeenOpen": [],
-  "pqActions": 48,
+  "pqActions": 49,
   "newTickets": 10,
-  "total": 58,
+  "total": 59,
   "typeBreakdown": [
     {
       "type": "false_positive",
@@ -31,12 +31,12 @@
       "count": 4
     },
     {
-      "type": "reject_shopify_payments",
+      "type": "request_response",
       "count": 4
     },
     {
-      "type": "request_response",
-      "count": 3
+      "type": "reject_shopify_payments",
+      "count": 4
     },
     {
       "type": "hold_payout",
@@ -55,5 +55,5 @@
       "count": 1
     }
   ],
-  "updatedAt": "2026-04-13T19:31:54Z"
+  "updatedAt": "2026-04-13T19:35:47Z"
 }
