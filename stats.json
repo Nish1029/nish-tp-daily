@@ -1,28 +1,22 @@
 {
   "date": "2026-04-13",
-  "pq": 30,
-  "pqLastSeenOpen": [
-    "6a2b7552-1b9b-4ae5-a188-b4e9433070d6",
-    "9cd7ffcc-50ac-47a7-a508-434bbaab4587",
-    "258a7d36-deaa-49e7-960f-ea166bdd36c5",
-    "48199941-bad1-42ac-98d5-1f7b36667c27",
-    "0119c2e6-97e9-4e6c-bb39-e6c87b9c6798"
-  ],
-  "pqActions": 13,
-  "newTickets": 5,
-  "total": 18,
+  "pq": 34,
+  "pqLastSeenOpen": [],
+  "pqActions": 15,
+  "newTickets": 6,
+  "total": 21,
   "typeBreakdown": [
     {
       "type": "marked_solved",
-      "count": 16
+      "count": 19
+    },
+    {
+      "type": "check_documents_stripe",
+      "count": 6
     },
     {
       "type": "terminate_without_communications",
       "count": 5
-    },
-    {
-      "type": "check_documents_stripe",
-      "count": 4
     },
     {
       "type": "content_removal_and_enable_payouts",
@@ -35,11 +29,7 @@
     {
       "type": "reject_without_communication",
       "count": 1
-    },
-    {
-      "type": "still_open",
-      "count": 1
     }
   ],
-  "updatedAt": "2026-04-13T16:13:06Z"
+  "updatedAt": "2026-04-13T16:35:38Z"
 }
