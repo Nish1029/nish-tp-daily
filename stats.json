@@ -1,7 +1,9 @@
 {
   "date": "2026-04-13",
-  "pq": 20,
-  "pqLastSeenOpen": [],
+  "pq": 21,
+  "pqLastSeenOpen": [
+    "0119c2e6-97e9-4e6c-bb39-e6c87b9c6798"
+  ],
   "pqActions": 5,
   "newTickets": 5,
   "total": 10,
@@ -17,7 +19,11 @@
     {
       "type": "content_removal_and_enable_payouts",
       "count": 2
+    },
+    {
+      "type": "still_open",
+      "count": 1
     }
   ],
-  "updatedAt": "2026-04-13T12:08:31Z"
+  "updatedAt": "2026-04-13T12:16:12Z"
 }
