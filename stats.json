@@ -1,21 +1,33 @@
 {
   "date": "2026-04-13",
-  "pq": 59,
+  "pq": 74,
   "pqLastSeenOpen": [],
-  "pqActions": 49,
-  "newTickets": 10,
-  "total": 59,
+  "pqActions": 59,
+  "newTickets": 15,
+  "total": 74,
   "typeBreakdown": [
     {
       "type": "false_positive",
-      "count": 14
+      "count": 19
     },
     {
       "type": "check_documents_stripe",
       "count": 10
     },
     {
+      "type": "marked_solved",
+      "count": 7
+    },
+    {
       "type": "terminate_platform_supportability",
+      "count": 6
+    },
+    {
+      "type": "reject_shopify_payments",
+      "count": 6
+    },
+    {
+      "type": "reject_without_communication",
       "count": 6
     },
     {
@@ -23,24 +35,16 @@
       "count": 6
     },
     {
-      "type": "reject_without_communication",
-      "count": 5
-    },
-    {
       "type": "pending_suspension",
       "count": 4
     },
     {
       "type": "request_response",
-      "count": 4
+      "count": 3
     },
     {
-      "type": "reject_shopify_payments",
-      "count": 4
-    },
-    {
-      "type": "hold_payout",
-      "count": 2
+      "type": "reject_shopify_payments_without_communications",
+      "count": 3
     },
     {
       "type": "content_removal_and_enable_payouts",
@@ -51,9 +55,9 @@
       "count": 1
     },
     {
-      "type": "reject_shopify_payments_without_communications",
+      "type": "email_merchant",
       "count": 1
     }
   ],
-  "updatedAt": "2026-04-13T19:43:44Z"
+  "updatedAt": "2026-04-13T19:47:31Z"
 }
