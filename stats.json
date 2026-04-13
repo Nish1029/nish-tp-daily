@@ -1,15 +1,17 @@
 {
   "date": "2026-04-13",
-  "pq": 38,
-  "pqLastSeenOpen": [],
+  "pq": 47,
+  "pqLastSeenOpen": [
+    "3e942c06-dcc0-43b9-8fa4-150680d1340b"
+  ],
   "pqActions": 0,
   "newTickets": 6,
   "total": 6,
   "typeBreakdown": [
     {
       "type": "marked_solved",
-      "count": 38
+      "count": 47
     }
   ],
-  "updatedAt": "2026-04-13T17:46:47Z"
+  "updatedAt": "2026-04-13T18:00:49Z"
 }
