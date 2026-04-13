@@ -1,55 +1,35 @@
 {
-  "date": "2026-04-12",
-  "pq": 59,
+  "date": "2026-04-13",
+  "pq": 19,
   "pqLastSeenOpen": [
-    "fb6f5f7c-1e11-4045-b48d-5df95dd899f0",
-    "6a2b7552-1b9b-4ae5-a188-b4e9433070d6",
-    "83134c56-4f58-4149-8b1b-437fbf933511"
+    "4b942ad6-4a2e-44a6-a671-9e50216e0472",
+    "9eee6988-8383-4a37-a7dd-ad555c8a097a",
+    "40322400-602f-40bc-9c80-1616abede27c",
+    "fbe9ade1-9e26-4b18-b96d-cb2eb99351a3",
+    "d6abe55a-1c32-423f-8566-7fec7d0b83e5",
+    "723e1dd7-a0dd-4d8f-ab4e-37999feb71da",
+    "2ba0f233-9242-4882-bdc2-b67e17d9ff6b",
+    "5de63c4c-58fb-4be4-8372-83fccda4d9f5",
+    "02bd5c38-488d-4a9b-8952-6e5e287af836",
+    "81a5f3eb-f2b2-4fbf-a8df-a1d31325c5ce",
+    "f70c7051-b224-4346-b3fd-790223bc93f0",
+    "c13868cb-5af2-4564-830e-720963d1c9b5",
+    "83134c56-4f58-4149-8b1b-437fbf933511",
+    "d1dc4917-32c8-4e45-a06e-24529baf8567",
+    "42cafc18-55aa-43d6-a1e0-5bce6097c709",
+    "b223c839-73f0-4cf8-ac4e-45c46cabaafc",
+    "2885619d-93ce-4537-8a4b-38ccb51a4eee",
+    "31f032f0-4419-463c-b32e-0728644cf2a7",
+    "9c1ec0f5-74ef-4847-b58a-0d99111f0224"
   ],
-  "pqActions": 30,
-  "newTickets": 19,
-  "total": 49,
+  "pqActions": 0,
+  "newTickets": 0,
+  "total": 0,
   "typeBreakdown": [
     {
-      "type": "marked_solved",
-      "count": 29
-    },
-    {
-      "type": "request_documentation",
-      "count": 8
-    },
-    {
-      "type": "check_documents_stripe",
-      "count": 7
-    },
-    {
-      "type": "terminate_shop",
-      "count": 4
-    },
-    {
-      "type": "false_positive",
-      "count": 4
-    },
-    {
-      "type": "reject_shopify_payments",
-      "count": 2
-    },
-    {
-      "type": "reject_shopify_payments_without_communications",
-      "count": 2
-    },
-    {
-      "type": "disable_payments",
-      "count": 1
-    },
-    {
-      "type": "content_removal_and_enable_payouts",
-      "count": 1
-    },
-    {
-      "type": "clear_and_enable_all",
-      "count": 1
+      "type": "still_open",
+      "count": 19
     }
   ],
-  "updatedAt": "2026-04-12T22:32:23Z"
+  "updatedAt": "2026-04-13T11:06:20Z"
 }
