@@ -1,7 +1,9 @@
 {
   "date": "2026-04-13",
-  "pq": 25,
+  "pq": 27,
   "pqLastSeenOpen": [
+    "f47fe31c-90bd-4fb1-b423-845810f1629d",
+    "c13868cb-5af2-4564-830e-720963d1c9b5",
     "6ad6e1ac-5b37-427f-8440-7c5c07d0884c",
     "054858b1-9a9b-4d66-acb5-183c3c320284",
     "48199941-bad1-42ac-98d5-1f7b36667c27",
@@ -14,7 +16,7 @@
   "typeBreakdown": [
     {
       "type": "marked_solved",
-      "count": 15
+      "count": 14
     },
     {
       "type": "check_documents_stripe",
@@ -30,8 +32,8 @@
     },
     {
       "type": "still_open",
-      "count": 3
+      "count": 6
     }
   ],
-  "updatedAt": "2026-04-13T14:39:09Z"
+  "updatedAt": "2026-04-13T14:51:54Z"
 }
