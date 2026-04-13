@@ -19,18 +19,22 @@
     "42cafc18-55aa-43d6-a1e0-5bce6097c709",
     "b223c839-73f0-4cf8-ac4e-45c46cabaafc"
   ],
-  "pqActions": 0,
+  "pqActions": 2,
   "newTickets": 1,
-  "total": 1,
+  "total": 3,
   "typeBreakdown": [
     {
+      "type": "check_documents_stripe",
+      "count": 2
+    },
+    {
       "type": "marked_solved",
-      "count": 4
+      "count": 2
     },
     {
       "type": "still_open",
       "count": 15
     }
   ],
-  "updatedAt": "2026-04-13T11:39:22Z"
+  "updatedAt": "2026-04-13T11:43:44Z"
 }
