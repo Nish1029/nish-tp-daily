@@ -6,29 +6,20 @@
     "9eee6988-8383-4a37-a7dd-ad555c8a097a",
     "40322400-602f-40bc-9c80-1616abede27c",
     "fbe9ade1-9e26-4b18-b96d-cb2eb99351a3",
-    "d6abe55a-1c32-423f-8566-7fec7d0b83e5",
     "b223c839-73f0-4cf8-ac4e-45c46cabaafc"
   ],
-  "pqActions": 3,
+  "pqActions": 0,
   "newTickets": 1,
-  "total": 4,
+  "total": 1,
   "typeBreakdown": [
     {
       "type": "marked_solved",
-      "count": 11
-    },
-    {
-      "type": "check_documents_stripe",
-      "count": 2
-    },
-    {
-      "type": "content_removal_and_enable_payouts",
-      "count": 1
+      "count": 15
     },
     {
       "type": "still_open",
-      "count": 5
+      "count": 4
     }
   ],
-  "updatedAt": "2026-04-13T11:48:15Z"
+  "updatedAt": "2026-04-13T11:54:52Z"
 }
