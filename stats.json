@@ -1,22 +1,15 @@
 {
   "date": "2026-04-13",
-  "pq": 36,
-  "pqLastSeenOpen": [
-    "c2cd539e-bd67-4453-99a6-a21a07f0c910",
-    "40c2bba6-6faf-4682-ae41-8e54d6c3416f"
-  ],
+  "pq": 38,
+  "pqLastSeenOpen": [],
   "pqActions": 0,
-  "newTickets": 7,
-  "total": 7,
+  "newTickets": 8,
+  "total": 8,
   "typeBreakdown": [
     {
       "type": "marked_solved",
-      "count": 35
-    },
-    {
-      "type": "still_open",
-      "count": 1
+      "count": 38
     }
   ],
-  "updatedAt": "2026-04-13T16:49:15Z"
+  "updatedAt": "2026-04-13T17:13:47Z"
 }
