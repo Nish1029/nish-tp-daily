@@ -1,78 +1,80 @@
 {
   "date": "2026-04-13",
-  "pq": 6,
+  "pq": 54,
   "pqLastSeenOpen": [
     "1e8d592d-f459-4f75-9dbf-d40954100c21",
+    "bcbe5580-bf94-4810-a253-2bfa4b192368",
+    "1643d672-b281-4928-b33b-dfa2dbdb8b04",
+    "704ffae9-1c45-451b-a1aa-834fd514f5b1",
+    "aab85a38-1727-4044-a01e-6aed5352fcd8",
+    "3e942c06-dcc0-43b9-8fa4-150680d1340b",
+    "ac80490f-ebee-4552-89a4-f67dc66dc049",
+    "ff90c714-495f-4a22-889a-57230eca36f2",
+    "c2cd539e-bd67-4453-99a6-a21a07f0c910",
+    "6a2b7552-1b9b-4ae5-a188-b4e9433070d6",
+    "48199941-bad1-42ac-98d5-1f7b36667c27",
+    "258a7d36-deaa-49e7-960f-ea166bdd36c5",
+    "054858b1-9a9b-4d66-acb5-183c3c320284",
+    "fbe9ade1-9e26-4b18-b96d-cb2eb99351a3",
+    "42cafc18-55aa-43d6-a1e0-5bce6097c709",
+    "a2ce5090-9efb-4e79-937e-c1e5a4e284a9",
+    "31f032f0-4419-463c-b32e-0728644cf2a7",
+    "9c1ec0f5-74ef-4847-b58a-0d99111f0224",
     "c1e08a4b-e854-44ed-93e6-3a2ca02a4d22",
-    "b0df2a97-7325-495a-86e3-0a80773f156f",
-    "ec08f1bd-b6b7-4b15-b7b6-42798368816f",
-    "6c0ae923-5d08-4500-8da2-37046b0e495c",
-    "bcbe5580-bf94-4810-a253-2bfa4b192368"
+    "f6d5c477-472b-456f-9844-7e3e577a9053",
+    "726ee4e7-ea23-46a2-86a4-928767490206",
+    "95d7ab2d-1b34-482e-93ca-183a2f5473e7",
+    "6eaeee56-afb6-4999-bf69-2b331911a1ac",
+    "dedc0b7f-5fb0-4dd9-a647-6ae103317491",
+    "19e797aa-46b2-49a4-a416-44c58dfdb510",
+    "6ad6e1ac-5b37-427f-8440-7c5c07d0884c",
+    "929cc124-88c4-49d7-8197-30b87801b1f1",
+    "5ac0023a-c3b1-4f35-87e4-7f8792a58533",
+    "40c2bba6-6faf-4682-ae41-8e54d6c3416f",
+    "0119c2e6-97e9-4e6c-bb39-e6c87b9c6798",
+    "9cd7ffcc-50ac-47a7-a508-434bbaab4587",
+    "f47fe31c-90bd-4fb1-b423-845810f1629d",
+    "c13868cb-5af2-4564-830e-720963d1c9b5",
+    "387bfd3e-59ee-4fde-bfb6-1b939c3d79fa",
+    "5a9f8669-870c-4be9-b094-5601820acfa2",
+    "05a1a1a1-b0dc-4ad1-82c7-499699406924",
+    "d890c67c-6590-43cd-9152-55d3832875d1",
+    "e2068593-f612-4394-936e-4d8943986fe1",
+    "a1a11e87-27b5-47f4-ae60-d465f60887b0",
+    "b223c839-73f0-4cf8-ac4e-45c46cabaafc",
+    "4b942ad6-4a2e-44a6-a671-9e50216e0472",
+    "9eee6988-8383-4a37-a7dd-ad555c8a097a",
+    "40322400-602f-40bc-9c80-1616abede27c",
+    "723e1dd7-a0dd-4d8f-ab4e-37999feb71da",
+    "d6abe55a-1c32-423f-8566-7fec7d0b83e5",
+    "2ba0f233-9242-4882-bdc2-b67e17d9ff6b",
+    "5de63c4c-58fb-4be4-8372-83fccda4d9f5",
+    "02bd5c38-488d-4a9b-8952-6e5e287af836",
+    "81a5f3eb-f2b2-4fbf-a8df-a1d31325c5ce",
+    "f70c7051-b224-4346-b3fd-790223bc93f0",
+    "83134c56-4f58-4149-8b1b-437fbf933511",
+    "d1dc4917-32c8-4e45-a06e-24529baf8567",
+    "2885619d-93ce-4537-8a4b-38ccb51a4eee",
+    "b0df2a97-7325-495a-86e3-0a80773f156f"
   ],
-  "pqActions": 5,
-  "newTickets": 71,
+  "pqActions": 53,
+  "newTickets": 23,
   "total": 76,
   "typeBreakdown": [
-    {
-      "type": "false_positive",
-      "count": 19
-    },
-    {
-      "type": "check_documents_stripe",
-      "count": 12
-    },
-    {
-      "type": "reject_shopify_payments",
-      "count": 7
-    },
-    {
-      "type": "marked_solved",
-      "count": 7
-    },
-    {
-      "type": "reject_without_communication",
-      "count": 6
-    },
-    {
-      "type": "terminate_without_communications",
-      "count": 6
-    },
-    {
-      "type": "terminate_platform_supportability",
-      "count": 5
-    },
-    {
-      "type": "pending_suspension",
-      "count": 3
-    },
-    {
-      "type": "request_response",
-      "count": 3
-    },
-    {
-      "type": "reject_shopify_payments_without_communications",
-      "count": 3
-    },
-    {
-      "type": "content_removal_and_enable_payouts",
-      "count": 2
-    },
-    {
-      "type": "accept_response_and_unsuspend",
-      "count": 1
-    },
-    {
-      "type": "clear_and_enable_all",
-      "count": 1
-    },
-    {
-      "type": "email_merchant",
-      "count": 1
-    },
-    {
-      "type": "still_open",
-      "count": 1
-    }
+    {"type": "check_documents_stripe", "count": 12},
+    {"type": "marked_solved", "count": 7},
+    {"type": "false_positive", "count": 6},
+    {"type": "terminate_without_communications", "count": 6},
+    {"type": "reject_shopify_payments", "count": 6},
+    {"type": "pending_suspension", "count": 3},
+    {"type": "reject_without_communication", "count": 3},
+    {"type": "reject_shopify_payments_without_communications", "count": 3},
+    {"type": "request_response", "count": 2},
+    {"type": "content_removal_and_enable_payouts", "count": 2},
+    {"type": "terminate_platform_supportability", "count": 1},
+    {"type": "clear_and_enable_all", "count": 1},
+    {"type": "email_merchant", "count": 1},
+    {"type": "still_open", "count": 1}
   ],
-  "updatedAt": "2026-04-14T00:25:10Z"
+  "updatedAt": "2026-04-14T00:26:00Z"
 }
