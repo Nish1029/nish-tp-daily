@@ -886,29 +886,18 @@ async function triggerAndRefresh() {
   btn.classList.add('spinning');
   btn.disabled = true;
 
-  // Try to kick the local tracker server (localhost:9177).
-  // If it's not reachable we just fall through to a normal refresh.
+  // Try to kick the local tracker server (localhost:9177) — fire and forget.
   let triggered = false;
   try {
     await fetch('http://localhost:9177/', { signal: AbortSignal.timeout(2000) });
     triggered = true;
-    // Tracker is now running. Poll stats.json until updatedAt changes (up to ~4 min).
-    const prevUpdated = (await loadRealtimeStats(todayStr()))?.updatedAt ?? '';
-    btn.textContent = '↻ Updating…';
-    let waited = 0;
-    while (waited < 240) {
-      await new Promise(r => setTimeout(r, 5000));
-      waited += 5;
-      const latest = await loadRealtimeStats(todayStr());
-      if (latest && latest.updatedAt !== prevUpdated) break;
-    }
   } catch (_) {
     // Trigger server not running — just reload current data
   }
 
   btn.disabled = false;
   await loadData();
-  showToast(triggered ? '✓ Stats updated' : '✓ Refreshed');
+  showToast(triggered ? '✓ Update triggered — stats refresh every 2 min' : '✓ Refreshed');
 }
 
 // ── DATA LOADING ──────────────────────────────────────────────
