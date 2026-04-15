@@ -2,51 +2,51 @@
   "date": "2026-04-15",
   "pq": 41,
   "pqLastSeenOpen": [
+    "03541d02-a38f-42a9-bdae-ebeff736f62a",
     "c7cb1898-9d54-4318-a52a-640cd7953f94",
-    "e956bc00-b937-4812-b6f1-9f2790495379",
+    "ecc9305e-fb2e-45ef-b25a-077309ef94fd",
     "1aa20cf5-56be-40f3-ad47-956a81018d1d",
-    "fbe9ade1-9e26-4b18-b96d-cb2eb99351a3",
-    "8b7d0203-cc6f-4c16-8cb9-3bb5e3662437",
-    "054858b1-9a9b-4d66-acb5-183c3c320284",
-    "316647d1-ef6f-41c4-8ffc-2550d64e2078",
-    "e841ff4a-b837-4aab-9d69-72eb4e119393",
     "4fc4c282-66e3-4265-8f85-8e9f681bcf27",
+    "059b39f5-08ff-4783-a993-4258d12e3d27",
     "e288d3bd-d390-4b95-bd97-d3c61e312862",
-    "7f536955-6fdf-4ffd-b92b-b36262713c04",
-    "6645fc96-7f75-4697-bd9b-bd9c97ed04c5",
-    "d4a6c4ed-5863-429e-9d57-ba4d4a70f6fb",
-    "258a7d36-deaa-49e7-960f-ea166bdd36c5",
-    "253dcc16-2b23-4d7b-978e-39a8169bee54",
-    "aab85a38-1727-4044-a01e-6aed5352fcd8",
-    "f4ba1f86-b676-468e-ae91-c573744586e5",
     "577d9830-2479-47b2-9424-82bec0be0e02",
-    "d09fa24e-9257-44ec-aaea-e923a3630fb8",
-    "f4ba1f86-b676-468e-aa91-c573744586e5",
-    "849b9038-1e38-48a1-9672-fe59f893d582",
-    "c2cd539e-bd67-4453-99a6-a21a07f0c910",
-    "6c47505e-8f03-458b-a595-b5c66bdd6379",
-    "c7ecfaec-d374-469d-802d-766debad2857",
+    "253dcc16-2b23-4d7b-978e-39a8169bee54",
+    "0a1bf614-a07f-4b0e-86e1-32330ee5c09c",
+    "7f536955-6fdf-4ffd-b92b-b36262713c04",
+    "258a7d36-deaa-49e7-960f-ea166bdd36c5",
     "9f0b0377-0e9d-47be-8b3e-462913b219a0",
-    "8bd6d42f-0416-48c9-afc4-9617128cd4c2",
+    "f4ba1f86-b676-468e-aa91-c573744586e5",
     "e968343d-144b-424f-99de-e3ab9c04d708",
     "31f032f0-4419-463c-b32e-0728644cf2a7",
     "52cd8087-af8e-47c6-a185-d0a9a723f36c",
-    "ecc9305e-fb2e-45ef-b25a-077309ef94fd",
-    "667d705d-a23f-4303-bd0c-2874f2df4f31",
-    "6dae6064-991b-46b3-a47b-51d09ec9e055",
-    "f4741662-d959-4a57-9c73-1fae0b6466f1",
-    "ed088a7e-caa9-4871-878a-092e9353e737",
+    "849b9038-1e38-48a1-9672-fe59f893d582",
+    "6c47505e-8f03-458b-a595-b5c66bdd6379",
+    "c2cd539e-bd67-4453-99a6-a21a07f0c910",
+    "8b7d0203-cc6f-4c16-8cb9-3bb5e3662437",
+    "e956bc00-b937-4812-b6f1-9f2790495379",
     "3d9e2a04-6189-4b17-89d5-1035b3f4e495",
-    "059b39f5-08ff-4783-a993-4258d12e3d27",
-    "777f1004-a642-4af8-b7d4-0fe71bd33403",
-    "03541d02-a38f-42a9-bdae-ebeff736f62a",
+    "667d705d-a23f-4303-bd0c-2874f2df4f31",
+    "aab85a38-1727-4044-a01e-6aed5352fcd8",
+    "6dae6064-991b-46b3-a47b-51d09ec9e055",
+    "fbe9ade1-9e26-4b18-b96d-cb2eb99351a3",
+    "f4ba1f86-b676-468e-ae91-c573744586e5",
+    "d09fa24e-9257-44ec-aaea-e923a3630fb8",
+    "316647d1-ef6f-41c4-8ffc-2550d64e2078",
     "ac80490f-ebee-4552-89a4-f67dc66dc049",
-    "0a1bf614-a07f-4b0e-86e1-32330ee5c09c",
-    "9188bcac-ca71-4161-9bf3-b8efd2470171"
+    "e841ff4a-b837-4aab-9d69-72eb4e119393",
+    "6645fc96-7f75-4697-bd9b-bd9c97ed04c5",
+    "c7ecfaec-d374-469d-802d-766debad2857",
+    "f4741662-d959-4a57-9c73-1fae0b6466f1",
+    "777f1004-a642-4af8-b7d4-0fe71bd33403",
+    "8bd6d42f-0416-48c9-afc4-9617128cd4c2",
+    "d4a6c4ed-5863-429e-9d57-ba4d4a70f6fb",
+    "ed088a7e-caa9-4871-878a-092e9353e737",
+    "9188bcac-ca71-4161-9bf3-b8efd2470171",
+    "054858b1-9a9b-4d66-acb5-183c3c320284"
   ],
-  "pqActions": 40,
+  "pqActions": 39,
   "newTickets": 25,
-  "total": 65,
+  "total": 64,
   "typeBreakdown": [
     {
       "type": "marked_solved",
@@ -73,10 +73,6 @@
       "count": 3
     },
     {
-      "type": "request_response",
-      "count": 2
-    },
-    {
       "type": "content_removal_and_enable_payouts",
       "count": 2
     },
@@ -97,13 +93,17 @@
       "count": 1
     },
     {
+      "type": "request_response",
+      "count": 1
+    },
+    {
       "type": "accept_response_and_unsuspend",
       "count": 1
     },
     {
       "type": "still_open",
-      "count": 1
+      "count": 2
     }
   ],
-  "updatedAt": "2026-04-15T21:11:29Z"
+  "updatedAt": "2026-04-15T21:15:23Z"
 }
