@@ -2,29 +2,33 @@
   "date": "2026-04-15",
   "pq": 15,
   "pqLastSeenOpen": [
-    "e841ff4a-b837-4aab-9d69-72eb4e119393",
-    "f4ba1f86-b676-468e-ae91-c573744586e5",
-    "6645fc96-7f75-4697-bd9b-bd9c97ed04c5",
+    "253dcc16-2b23-4d7b-978e-39a8169bee54",
+    "577d9830-2479-47b2-9424-82bec0be0e02",
     "ecc9305e-fb2e-45ef-b25a-077309ef94fd",
     "8bd6d42f-0416-48c9-afc4-9617128cd4c2",
     "3d9e2a04-6189-4b17-89d5-1035b3f4e495",
-    "31f032f0-4419-463c-b32e-0728644cf2a7",
-    "577d9830-2479-47b2-9424-82bec0be0e02",
     "52cd8087-af8e-47c6-a185-d0a9a723f36c",
-    "f4ba1f86-b676-468e-aa91-c573744586e5",
+    "f4ba1f86-b676-468e-ae91-c573744586e5",
     "e288d3bd-d390-4b95-bd97-d3c61e312862",
-    "253dcc16-2b23-4d7b-978e-39a8169bee54",
+    "d4a6c4ed-5863-429e-9d57-ba4d4a70f6fb",
+    "e841ff4a-b837-4aab-9d69-72eb4e119393",
+    "31f032f0-4419-463c-b32e-0728644cf2a7",
     "ed088a7e-caa9-4871-878a-092e9353e737",
+    "6645fc96-7f75-4697-bd9b-bd9c97ed04c5",
     "9188bcac-ca71-4161-9bf3-b8efd2470171",
-    "d4a6c4ed-5863-429e-9d57-ba4d4a70f6fb"
+    "f4ba1f86-b676-468e-aa91-c573744586e5"
   ],
-  "pqActions": 7,
+  "pqActions": 8,
   "newTickets": 0,
-  "total": 7,
+  "total": 8,
   "typeBreakdown": [
     {
       "type": "false_positive",
       "count": 4
+    },
+    {
+      "type": "pending_suspension",
+      "count": 1
     },
     {
       "type": "check_documents_stripe",
@@ -40,8 +44,8 @@
     },
     {
       "type": "still_open",
-      "count": 8
+      "count": 7
     }
   ],
-  "updatedAt": "2026-04-15T12:01:02Z"
+  "updatedAt": "2026-04-15T12:06:15Z"
 }
