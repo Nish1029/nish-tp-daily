@@ -1,17 +1,18 @@
 {
   "date": "2026-04-16",
-  "pq": 10,
+  "pq": 11,
   "pqLastSeenOpen": [
-    "f5652ac4-ba65-4f30-87a4-9c28ee341c33",
-    "370ccdb7-7d8f-4d17-b138-ced7a1e18313",
-    "59ed275b-49d8-4029-aae1-25f5c875564b",
-    "c7cb1898-9d54-4318-a52a-640cd7953f94",
-    "6dba832c-4e90-4361-92e7-b7102a36c9cb",
     "34d54b6f-7763-420f-b5c1-e0f87db0782f",
-    "40b1c88f-2185-49b4-8934-ef362b649151",
     "c13268bb-a504-4040-9652-57c15b522561",
     "3d9e2a04-6189-4b17-89d5-1035b3f4e495",
-    "62b5255b-4e19-430e-8006-2970e08ec27c"
+    "40b1c88f-2185-49b4-8934-ef362b649151",
+    "c7cb1898-9d54-4318-a52a-640cd7953f94",
+    "95e0ceae-865e-462b-88c0-6a5391f60451",
+    "370ccdb7-7d8f-4d17-b138-ced7a1e18313",
+    "6dba832c-4e90-4361-92e7-b7102a36c9cb",
+    "f5652ac4-ba65-4f30-87a4-9c28ee341c33",
+    "62b5255b-4e19-430e-8006-2970e08ec27c",
+    "59ed275b-49d8-4029-aae1-25f5c875564b"
   ],
   "pqActions": 10,
   "newTickets": 28,
@@ -68,7 +69,11 @@
     {
       "type": "reject_shopify_payments_without_communications",
       "count": 1
+    },
+    {
+      "type": "still_open",
+      "count": 1
     }
   ],
-  "updatedAt": "2026-04-16T13:57:58Z"
+  "updatedAt": "2026-04-16T14:01:27Z"
 }
