@@ -2,20 +2,20 @@
   "date": "2026-04-16",
   "pq": 6,
   "pqLastSeenOpen": [
-    "f5652ac4-ba65-4f30-87a4-9c28ee341c33",
-    "62b5255b-4e19-430e-8006-2970e08ec27c",
     "3d9e2a04-6189-4b17-89d5-1035b3f4e495",
-    "c13268bb-a504-4040-9652-57c15b522561",
+    "62b5255b-4e19-430e-8006-2970e08ec27c",
+    "f5652ac4-ba65-4f30-87a4-9c28ee341c33",
+    "40b1c88f-2185-49b4-8934-ef362b649151",
     "6dba832c-4e90-4361-92e7-b7102a36c9cb",
-    "40b1c88f-2185-49b4-8934-ef362b649151"
+    "c13268bb-a504-4040-9652-57c15b522561"
   ],
-  "pqActions": 4,
+  "pqActions": 5,
   "newTickets": 0,
-  "total": 4,
+  "total": 5,
   "typeBreakdown": [
     {
       "type": "marked_solved",
-      "count": 3
+      "count": 4
     },
     {
       "type": "false_positive",
@@ -23,8 +23,8 @@
     },
     {
       "type": "still_open",
-      "count": 2
+      "count": 1
     }
   ],
-  "updatedAt": "2026-04-16T10:42:56Z"
+  "updatedAt": "2026-04-16T10:45:46Z"
 }
