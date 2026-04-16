@@ -2,20 +2,24 @@
   "date": "2026-04-16",
   "pq": 9,
   "pqLastSeenOpen": [
-    "6dba832c-4e90-4361-92e7-b7102a36c9cb",
-    "c13268bb-a504-4040-9652-57c15b522561",
-    "40b1c88f-2185-49b4-8934-ef362b649151",
-    "62b5255b-4e19-430e-8006-2970e08ec27c",
-    "370ccdb7-7d8f-4d17-b138-ced7a1e18313",
     "34d54b6f-7763-420f-b5c1-e0f87db0782f",
-    "59ed275b-49d8-4029-aae1-25f5c875564b",
+    "6dba832c-4e90-4361-92e7-b7102a36c9cb",
+    "3d9e2a04-6189-4b17-89d5-1035b3f4e495",
     "f5652ac4-ba65-4f30-87a4-9c28ee341c33",
-    "3d9e2a04-6189-4b17-89d5-1035b3f4e495"
+    "40b1c88f-2185-49b4-8934-ef362b649151",
+    "370ccdb7-7d8f-4d17-b138-ced7a1e18313",
+    "c13268bb-a504-4040-9652-57c15b522561",
+    "59ed275b-49d8-4029-aae1-25f5c875564b",
+    "62b5255b-4e19-430e-8006-2970e08ec27c"
   ],
   "pqActions": 8,
-  "newTickets": 10,
-  "total": 18,
+  "newTickets": 13,
+  "total": 21,
   "typeBreakdown": [
+    {
+      "type": "false_positive",
+      "count": 5
+    },
     {
       "type": "marked_solved",
       "count": 4
@@ -26,10 +30,6 @@
     },
     {
       "type": "reject_without_communication",
-      "count": 2
-    },
-    {
-      "type": "false_positive",
       "count": 2
     },
     {
@@ -65,5 +65,5 @@
       "count": 1
     }
   ],
-  "updatedAt": "2026-04-16T12:59:26Z"
+  "updatedAt": "2026-04-16T13:02:29Z"
 }
