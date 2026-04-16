@@ -1,24 +1,25 @@
 {
   "date": "2026-04-16",
-  "pq": 13,
+  "pq": 14,
   "pqLastSeenOpen": [
     "f90f24e7-5209-465e-b909-7f288dc98488",
     "c13268bb-a504-4040-9652-57c15b522561",
-    "f5652ac4-ba65-4f30-87a4-9c28ee341c33",
-    "95e0ceae-865e-462b-88c0-6a5391f60451",
-    "370ccdb7-7d8f-4d17-b138-ced7a1e18313",
-    "34d54b6f-7763-420f-b5c1-e0f87db0782f",
-    "6dba832c-4e90-4361-92e7-b7102a36c9cb",
-    "c7cb1898-9d54-4318-a52a-640cd7953f94",
-    "59ed275b-49d8-4029-aae1-25f5c875564b",
+    "11dd61e9-ee29-4acc-be64-5ac997a4c4f7",
     "40b1c88f-2185-49b4-8934-ef362b649151",
+    "95e0ceae-865e-462b-88c0-6a5391f60451",
+    "f5652ac4-ba65-4f30-87a4-9c28ee341c33",
+    "6dba832c-4e90-4361-92e7-b7102a36c9cb",
+    "34d54b6f-7763-420f-b5c1-e0f87db0782f",
+    "59ed275b-49d8-4029-aae1-25f5c875564b",
+    "62b5255b-4e19-430e-8006-2970e08ec27c",
+    "c7cb1898-9d54-4318-a52a-640cd7953f94",
     "3d9e2a04-6189-4b17-89d5-1035b3f4e495",
     "c2cd539e-bd67-4453-99a6-a21a07f0c910",
-    "62b5255b-4e19-430e-8006-2970e08ec27c"
+    "370ccdb7-7d8f-4d17-b138-ced7a1e18313"
   ],
   "pqActions": 12,
-  "newTickets": 29,
-  "total": 41,
+  "newTickets": 30,
+  "total": 42,
   "typeBreakdown": [
     {
       "type": "false_positive",
@@ -33,15 +34,15 @@
       "count": 4
     },
     {
+      "type": "request_response",
+      "count": 3
+    },
+    {
       "type": "hold_payout",
       "count": 3
     },
     {
       "type": "pending_suspension",
-      "count": 2
-    },
-    {
-      "type": "request_response",
       "count": 2
     },
     {
@@ -74,8 +75,8 @@
     },
     {
       "type": "still_open",
-      "count": 1
+      "count": 2
     }
   ],
-  "updatedAt": "2026-04-16T14:22:48Z"
+  "updatedAt": "2026-04-16T14:26:44Z"
 }
