@@ -2,39 +2,43 @@
   "date": "2026-04-19",
   "pq": 26,
   "pqLastSeenOpen": [
-    "4092dcec-033f-4d35-b64d-d4f248ad9663",
-    "bcbe5580-bf94-4810-a253-2bfa4b192368",
-    "02209983-2bb2-4351-a7fa-206957c9844c",
-    "83dc054b-d1df-4aa2-b668-a63fdbd519ad",
-    "cc4650a0-fbd2-43bd-88af-56a41bb59d71",
-    "b0d3aa86-989d-4b44-8ac8-999100d68a85",
-    "726a5bfb-b8e4-4b0c-9042-518e39104b81",
-    "a3113834-e908-4c31-bf76-981ec619f665",
-    "fbdde9b1-713e-48d4-b522-6699132ad945",
-    "aab85a38-1727-4044-a01e-6aed5352fcd8",
-    "fbe9ade1-9e26-4b18-b96d-cb2eb99351a3",
-    "11dd61e9-ee29-4acc-be64-5ac997a4c4f7",
-    "a13c354a-0c8a-4a1c-8c50-dd33da8d31ac",
-    "d562c9e4-43b1-4c2c-9363-269abb3fca9a",
-    "3fa4b506-f2a4-487c-882b-93921badb48c",
-    "1e8d592d-f459-4f75-9dbf-d40954100c21",
-    "8c9ce32c-7f23-4725-9922-3cbdeb095624",
-    "47463d40-e6cc-4396-b3dc-8e367d16266f",
-    "bb5b39ad-9f42-415d-9e03-ca50e4b06728",
-    "2040ef55-15e4-4e3c-a408-d530be48fed7",
-    "e6fd3bf6-c549-4d63-a492-c46a1a6d7747",
     "cb677148-903a-4c47-94cd-59af2e0ef26a",
-    "c38d466b-cb8d-4cc6-9f77-98f934a7bf60",
-    "507ce8c7-7396-4b3c-9f4c-f27d95abb933",
+    "bcbe5580-bf94-4810-a253-2bfa4b192368",
+    "e6fd3bf6-c549-4d63-a492-c46a1a6d7747",
+    "fbe9ade1-9e26-4b18-b96d-cb2eb99351a3",
+    "fbdde9b1-713e-48d4-b522-6699132ad945",
+    "a13c354a-0c8a-4a1c-8c50-dd33da8d31ac",
+    "cc4650a0-fbd2-43bd-88af-56a41bb59d71",
+    "02209983-2bb2-4351-a7fa-206957c9844c",
+    "3fa4b506-f2a4-487c-882b-93921badb48c",
+    "2451e793-4b81-4249-8e0b-4b56b2a63b53",
+    "83dc054b-d1df-4aa2-b668-a63fdbd519ad",
+    "b0d3aa86-989d-4b44-8ac8-999100d68a85",
+    "aab85a38-1727-4044-a01e-6aed5352fcd8",
+    "d562c9e4-43b1-4c2c-9363-269abb3fca9a",
+    "726a5bfb-b8e4-4b0c-9042-518e39104b81",
+    "2040ef55-15e4-4e3c-a408-d530be48fed7",
+    "1e8d592d-f459-4f75-9dbf-d40954100c21",
+    "bb5b39ad-9f42-415d-9e03-ca50e4b06728",
+    "4092dcec-033f-4d35-b64d-d4f248ad9663",
+    "11dd61e9-ee29-4acc-be64-5ac997a4c4f7",
+    "8c9ce32c-7f23-4725-9922-3cbdeb095624",
+    "a3113834-e908-4c31-bf76-981ec619f665",
     "f4b71333-3a70-4426-a665-b3a7dfec7571",
-    "2451e793-4b81-4249-8e0b-4b56b2a63b53"
+    "507ce8c7-7396-4b3c-9f4c-f27d95abb933",
+    "c38d466b-cb8d-4cc6-9f77-98f934a7bf60",
+    "47463d40-e6cc-4396-b3dc-8e367d16266f"
   ],
-  "pqActions": 2,
+  "pqActions": 3,
   "newTickets": 0,
-  "total": 2,
+  "total": 3,
   "typeBreakdown": [
     {
       "type": "hold_payout",
+      "count": 1
+    },
+    {
+      "type": "clear_and_enable_all",
       "count": 1
     },
     {
@@ -43,8 +47,8 @@
     },
     {
       "type": "still_open",
-      "count": 24
+      "count": 23
     }
   ],
-  "updatedAt": "2026-04-19T15:47:37Z"
+  "updatedAt": "2026-04-19T15:50:40Z"
 }
