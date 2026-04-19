@@ -1,80 +1,10 @@
 {
-  "date": "2026-04-16",
-  "pq": 16,
-  "pqLastSeenOpen": [
-    "11dd61e9-ee29-4acc-be64-5ac997a4c4f7",
-    "f5652ac4-ba65-4f30-87a4-9c28ee341c33",
-    "59ed275b-49d8-4029-aae1-25f5c875564b",
-    "e9da72c9-c30c-4cb2-b51d-226c9920c899",
-    "f90f24e7-5209-465e-b909-7f288dc98488",
-    "370ccdb7-7d8f-4d17-b138-ced7a1e18313",
-    "6dba832c-4e90-4361-92e7-b7102a36c9cb",
-    "c2cd539e-bd67-4453-99a6-a21a07f0c910",
-    "4d99dc96-099f-44dd-9b64-ef416a6352d0",
-    "c7cb1898-9d54-4318-a52a-640cd7953f94",
-    "3d9e2a04-6189-4b17-89d5-1035b3f4e495",
-    "95e0ceae-865e-462b-88c0-6a5391f60451",
-    "34d54b6f-7763-420f-b5c1-e0f87db0782f",
-    "40b1c88f-2185-49b4-8934-ef362b649151",
-    "c13268bb-a504-4040-9652-57c15b522561",
-    "62b5255b-4e19-430e-8006-2970e08ec27c"
-  ],
-  "pqActions": 16,
-  "newTickets": 37,
-  "total": 53,
-  "typeBreakdown": [
-    {
-      "type": "false_positive",
-      "count": 18
-    },
-    {
-      "type": "pending_suspension",
-      "count": 6
-    },
-    {
-      "type": "terminate_platform_supportability",
-      "count": 6
-    },
-    {
-      "type": "marked_solved",
-      "count": 5
-    },
-    {
-      "type": "hold_payout",
-      "count": 4
-    },
-    {
-      "type": "request_response",
-      "count": 3
-    },
-    {
-      "type": "reject_shopify_payments",
-      "count": 3
-    },
-    {
-      "type": "email_merchant",
-      "count": 2
-    },
-    {
-      "type": "reject_without_communication",
-      "count": 2
-    },
-    {
-      "type": "check_documents_stripe",
-      "count": 1
-    },
-    {
-      "type": "clear_and_enable_all",
-      "count": 1
-    },
-    {
-      "type": "terminate_without_communications",
-      "count": 1
-    },
-    {
-      "type": "reject_shopify_payments_without_communications",
-      "count": 1
-    }
-  ],
-  "updatedAt": "2026-04-16T15:28:37Z"
+  "date": "2026-04-19",
+  "pq": 0,
+  "pqLastSeenOpen": [],
+  "pqActions": 0,
+  "newTickets": 0,
+  "total": 0,
+  "typeBreakdown": [],
+  "updatedAt": "2026-04-19T13:46:51Z"
 }
