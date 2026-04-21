@@ -2,54 +2,54 @@
   "date": "2026-04-21",
   "pq": 44,
   "pqLastSeenOpen": [
-    "53f0beca-e927-4c7c-a8b0-6ceecd3b15bd",
-    "d477f213-55a6-4155-b70b-28d5a40af090",
-    "f5032961-78d1-44ca-95d6-39d1db003c74",
-    "bcbe5580-bf94-4810-a253-2bfa4b192368",
-    "89ce852f-ed40-427a-9d2a-e79cead4744b",
-    "a347be83-36e6-49e8-846c-a4a2fb58470c",
-    "5548ca44-2d44-4574-ad9e-541f7eeb8788",
-    "bf981395-ef97-4947-974b-bf1725e36b58",
-    "e7b458ba-9f01-435e-a870-75aea491413a",
-    "bbb96cc0-cc8f-4f11-bab3-759fc35412ba",
-    "e603a2ad-a7b8-4e9c-b9b8-a4e838a85218",
-    "2a3201db-d57f-4bf5-a610-7ed758c5dac3",
-    "370ccdb7-7d8f-4d17-b138-ced7a1e18313",
     "986915a6-1f2e-4c96-b3db-3982a4c67751",
-    "12c18fa4-3580-4c51-872d-5d349545888c",
-    "0210fbb6-5abc-4b78-b404-67096a5f607c",
-    "73890fbe-e351-40a5-81da-99aed4699dfa",
-    "3d25cde8-e0d1-470b-929c-bdb8c657649e",
     "8e25bd5e-f9e8-43c1-ab22-a15b318e3a97",
-    "1231ff4e-d506-4e90-9624-d61ce0db9dfd",
-    "0f417009-1566-47e3-9b9b-f8503b247f77",
-    "d072168a-20d2-4ce3-a843-0a7fb6af4735",
-    "1552d4ac-1e15-4c23-bc60-f735f3482359",
-    "8d496e4a-6e05-4a31-bea8-47501d831e5d",
-    "24995fe4-ebee-4fd0-9415-3a8d2a5c69f9",
-    "d96e3243-b3c2-4282-93cd-218185678da9",
-    "34d54b6f-7763-420f-b5c1-e0f87db0782f",
-    "f90f24e7-5209-465e-b909-7f288dc98488",
-    "20f2df39-c23b-4df8-bda4-9d439cb58f3a",
-    "4b6dccc3-d392-44a0-83b7-a169060fa89c",
-    "d5254db3-e1a8-489f-aa86-8982081680cb",
     "44b64bf4-b4dc-4e70-b884-70f0bca2c624",
-    "805c3061-3fa7-48d3-bdd8-bfca0930fd48",
     "bddc7e95-7308-422f-940b-aba76ef0e6ce",
-    "4fc54358-ec2f-498b-b691-6bddef0d695a",
-    "375139c3-0fa1-45fc-99da-639dde306506",
-    "1e8d592d-f459-4f75-9dbf-d40954100c21",
     "06705f89-667c-44f0-95ea-f81653353e84",
-    "b0d3aa86-989d-4b44-8ac8-999100d68a85",
-    "53f3158c-54e2-49b5-8235-e4cb6ed93dc9",
-    "e450b183-2195-42c8-a4f7-05bff8ebf9b0",
-    "5a13cc87-5348-4677-bf86-9440d9c5cc8b",
+    "e603a2ad-a7b8-4e9c-b9b8-a4e838a85218",
+    "4b6dccc3-d392-44a0-83b7-a169060fa89c",
     "258a7d36-deaa-49e7-960f-ea166bdd36c5",
-    "150eca31-09dc-4ac9-b70d-4e3bfc9f8fa1"
+    "bbb96cc0-cc8f-4f11-bab3-759fc35412ba",
+    "bf981395-ef97-4947-974b-bf1725e36b58",
+    "12c18fa4-3580-4c51-872d-5d349545888c",
+    "89ce852f-ed40-427a-9d2a-e79cead4744b",
+    "8d496e4a-6e05-4a31-bea8-47501d831e5d",
+    "1552d4ac-1e15-4c23-bc60-f735f3482359",
+    "53f3158c-54e2-49b5-8235-e4cb6ed93dc9",
+    "20f2df39-c23b-4df8-bda4-9d439cb58f3a",
+    "5a13cc87-5348-4677-bf86-9440d9c5cc8b",
+    "f90f24e7-5209-465e-b909-7f288dc98488",
+    "a347be83-36e6-49e8-846c-a4a2fb58470c",
+    "b0d3aa86-989d-4b44-8ac8-999100d68a85",
+    "5548ca44-2d44-4574-ad9e-541f7eeb8788",
+    "1e8d592d-f459-4f75-9dbf-d40954100c21",
+    "1231ff4e-d506-4e90-9624-d61ce0db9dfd",
+    "375139c3-0fa1-45fc-99da-639dde306506",
+    "2a3201db-d57f-4bf5-a610-7ed758c5dac3",
+    "24995fe4-ebee-4fd0-9415-3a8d2a5c69f9",
+    "34d54b6f-7763-420f-b5c1-e0f87db0782f",
+    "370ccdb7-7d8f-4d17-b138-ced7a1e18313",
+    "805c3061-3fa7-48d3-bdd8-bfca0930fd48",
+    "4fc54358-ec2f-498b-b691-6bddef0d695a",
+    "e7b458ba-9f01-435e-a870-75aea491413a",
+    "3d25cde8-e0d1-470b-929c-bdb8c657649e",
+    "d96e3243-b3c2-4282-93cd-218185678da9",
+    "73890fbe-e351-40a5-81da-99aed4699dfa",
+    "150eca31-09dc-4ac9-b70d-4e3bfc9f8fa1",
+    "bcbe5580-bf94-4810-a253-2bfa4b192368",
+    "f5032961-78d1-44ca-95d6-39d1db003c74",
+    "d477f213-55a6-4155-b70b-28d5a40af090",
+    "d5254db3-e1a8-489f-aa86-8982081680cb",
+    "0f417009-1566-47e3-9b9b-f8503b247f77",
+    "e450b183-2195-42c8-a4f7-05bff8ebf9b0",
+    "53f0beca-e927-4c7c-a8b0-6ceecd3b15bd",
+    "0210fbb6-5abc-4b78-b404-67096a5f607c",
+    "d072168a-20d2-4ce3-a843-0a7fb6af4735"
   ],
   "pqActions": 44,
-  "newTickets": 14,
-  "total": 58,
+  "newTickets": 16,
+  "total": 60,
   "typeBreakdown": [
     {
       "type": "marked_solved",
@@ -57,7 +57,11 @@
     },
     {
       "type": "false_positive",
-      "count": 10
+      "count": 11
+    },
+    {
+      "type": "pending_suspension",
+      "count": 5
     },
     {
       "type": "check_documents_stripe",
@@ -65,10 +69,6 @@
     },
     {
       "type": "request_response",
-      "count": 4
-    },
-    {
-      "type": "pending_suspension",
       "count": 4
     },
     {
@@ -108,5 +108,5 @@
       "count": 1
     }
   ],
-  "updatedAt": "2026-04-21T18:46:33Z"
+  "updatedAt": "2026-04-21T18:50:32Z"
 }
