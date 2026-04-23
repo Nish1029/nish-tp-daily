@@ -2,26 +2,26 @@
   "date": "2026-04-23",
   "pq": 16,
   "pqLastSeenOpen": [
-    "e3f981ca-e537-4f5f-bd9f-cced08ef547c",
     "a0f7bac6-875a-4998-8675-c8574cf083c2",
-    "7d066fb7-707e-4562-8257-49e9dd112634",
-    "b719ed69-4bb0-42ec-8e59-05a1cd0a7ae6",
+    "2cb1afaf-4192-4b68-ae8b-28fd0945fe9b",
     "601899f2-a27b-4897-bcb7-3eb376c72007",
     "a40b52b0-ca46-4bdb-8458-964a37ef6826",
-    "62378133-1efd-40c0-a8aa-57cc9b70e3b5",
-    "060c811e-0a40-4290-a65b-dd9c5068d9cb",
-    "58e9d237-7776-480a-a70d-0c9bb2f30351",
-    "cf8dcc44-5d9d-442d-8d0e-c199325a1259",
-    "f324fb29-d78b-4e1a-99eb-e782e9c4d579",
-    "59ed275b-49d8-4029-aae1-25f5c875564b",
-    "b00724fa-b115-4c49-b30d-e8c52d751338",
+    "b719ed69-4bb0-42ec-8e59-05a1cd0a7ae6",
     "1701d9e7-6156-4357-8e80-6d8cd44a77fb",
     "ada99a89-690b-489f-8398-c000c2b8473b",
-    "2cb1afaf-4192-4b68-ae8b-28fd0945fe9b"
+    "59ed275b-49d8-4029-aae1-25f5c875564b",
+    "7d066fb7-707e-4562-8257-49e9dd112634",
+    "060c811e-0a40-4290-a65b-dd9c5068d9cb",
+    "cf8dcc44-5d9d-442d-8d0e-c199325a1259",
+    "e3f981ca-e537-4f5f-bd9f-cced08ef547c",
+    "b00724fa-b115-4c49-b30d-e8c52d751338",
+    "58e9d237-7776-480a-a70d-0c9bb2f30351",
+    "f324fb29-d78b-4e1a-99eb-e782e9c4d579",
+    "62378133-1efd-40c0-a8aa-57cc9b70e3b5"
   ],
   "pqActions": 16,
-  "newTickets": 15,
-  "total": 31,
+  "newTickets": 16,
+  "total": 32,
   "typeBreakdown": [
     {
       "type": "marked_solved",
@@ -30,6 +30,10 @@
     {
       "type": "false_positive",
       "count": 5
+    },
+    {
+      "type": "pending_suspension",
+      "count": 3
     },
     {
       "type": "check_documents_stripe",
@@ -41,10 +45,6 @@
     },
     {
       "type": "hold_payout",
-      "count": 2
-    },
-    {
-      "type": "pending_suspension",
       "count": 2
     },
     {
@@ -72,5 +72,5 @@
       "count": 1
     }
   ],
-  "updatedAt": "2026-04-23T13:53:17Z"
+  "updatedAt": "2026-04-23T13:56:22Z"
 }
