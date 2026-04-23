@@ -1,18 +1,19 @@
 {
   "date": "2026-04-23",
-  "pq": 11,
+  "pq": 12,
   "pqLastSeenOpen": [
-    "a40b52b0-ca46-4bdb-8458-964a37ef6826",
-    "1701d9e7-6156-4357-8e80-6d8cd44a77fb",
-    "cf8dcc44-5d9d-442d-8d0e-c199325a1259",
-    "7d066fb7-707e-4562-8257-49e9dd112634",
-    "f324fb29-d78b-4e1a-99eb-e782e9c4d579",
-    "b00724fa-b115-4c49-b30d-e8c52d751338",
-    "e3f981ca-e537-4f5f-bd9f-cced08ef547c",
     "b719ed69-4bb0-42ec-8e59-05a1cd0a7ae6",
+    "62378133-1efd-40c0-a8aa-57cc9b70e3b5",
     "060c811e-0a40-4290-a65b-dd9c5068d9cb",
-    "a0f7bac6-875a-4998-8675-c8574cf083c2",
-    "62378133-1efd-40c0-a8aa-57cc9b70e3b5"
+    "b00724fa-b115-4c49-b30d-e8c52d751338",
+    "a40b52b0-ca46-4bdb-8458-964a37ef6826",
+    "cf8dcc44-5d9d-442d-8d0e-c199325a1259",
+    "f324fb29-d78b-4e1a-99eb-e782e9c4d579",
+    "59ed275b-49d8-4029-aae1-25f5c875564b",
+    "1701d9e7-6156-4357-8e80-6d8cd44a77fb",
+    "7d066fb7-707e-4562-8257-49e9dd112634",
+    "e3f981ca-e537-4f5f-bd9f-cced08ef547c",
+    "a0f7bac6-875a-4998-8675-c8574cf083c2"
   ],
   "pqActions": 0,
   "newTickets": 2,
@@ -28,8 +29,8 @@
     },
     {
       "type": "still_open",
-      "count": 11
+      "count": 12
     }
   ],
-  "updatedAt": "2026-04-23T11:23:28Z"
+  "updatedAt": "2026-04-23T11:26:07Z"
 }
