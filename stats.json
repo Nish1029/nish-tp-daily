@@ -1,37 +1,39 @@
 {
   "date": "2026-04-23",
-  "pq": 22,
+  "pq": 24,
   "pqLastSeenOpen": [
-    "a0f7bac6-875a-4998-8675-c8574cf083c2",
-    "62378133-1efd-40c0-a8aa-57cc9b70e3b5",
-    "060c811e-0a40-4290-a65b-dd9c5068d9cb",
-    "b00724fa-b115-4c49-b30d-e8c52d751338",
-    "b719ed69-4bb0-42ec-8e59-05a1cd0a7ae6",
-    "a087a89f-0fe9-4974-94c9-61731df06e18",
-    "e3f981ca-e537-4f5f-bd9f-cced08ef547c",
-    "bf412004-e409-4e10-92e0-5d77ff72d0d2",
-    "1701d9e7-6156-4357-8e80-6d8cd44a77fb",
-    "ada99a89-690b-489f-8398-c000c2b8473b",
-    "2cb1afaf-4192-4b68-ae8b-28fd0945fe9b",
-    "7d066fb7-707e-4562-8257-49e9dd112634",
-    "601899f2-a27b-4897-bcb7-3eb376c72007",
     "e9da72c9-c30c-4cb2-b51d-226c9920c899",
+    "6dd1593a-acfe-471c-90a2-5124491e30e3",
+    "7d066fb7-707e-4562-8257-49e9dd112634",
     "a40b52b0-ca46-4bdb-8458-964a37ef6826",
-    "cf8dcc44-5d9d-442d-8d0e-c199325a1259",
-    "59ed275b-49d8-4029-aae1-25f5c875564b",
-    "78598037-9466-41bb-81a9-3bd6e5a17edc",
-    "58e9d237-7776-480a-a70d-0c9bb2f30351",
-    "4f46b774-50aa-49a8-9dbe-fb6d01dbde63",
     "f324fb29-d78b-4e1a-99eb-e782e9c4d579",
-    "4381f7d3-1c41-4985-bbc8-5038940f206b"
+    "71f05f67-f0f2-4536-b9a0-e14de32fd09d",
+    "b00724fa-b115-4c49-b30d-e8c52d751338",
+    "ada99a89-690b-489f-8398-c000c2b8473b",
+    "cf8dcc44-5d9d-442d-8d0e-c199325a1259",
+    "e3f981ca-e537-4f5f-bd9f-cced08ef547c",
+    "1701d9e7-6156-4357-8e80-6d8cd44a77fb",
+    "a0f7bac6-875a-4998-8675-c8574cf083c2",
+    "601899f2-a27b-4897-bcb7-3eb376c72007",
+    "bf412004-e409-4e10-92e0-5d77ff72d0d2",
+    "62378133-1efd-40c0-a8aa-57cc9b70e3b5",
+    "78598037-9466-41bb-81a9-3bd6e5a17edc",
+    "59ed275b-49d8-4029-aae1-25f5c875564b",
+    "2cb1afaf-4192-4b68-ae8b-28fd0945fe9b",
+    "060c811e-0a40-4290-a65b-dd9c5068d9cb",
+    "a087a89f-0fe9-4974-94c9-61731df06e18",
+    "58e9d237-7776-480a-a70d-0c9bb2f30351",
+    "4381f7d3-1c41-4985-bbc8-5038940f206b",
+    "4f46b774-50aa-49a8-9dbe-fb6d01dbde63",
+    "b719ed69-4bb0-42ec-8e59-05a1cd0a7ae6"
   ],
-  "pqActions": 21,
-  "newTickets": 27,
-  "total": 48,
+  "pqActions": 22,
+  "newTickets": 28,
+  "total": 50,
   "typeBreakdown": [
     {
       "type": "check_documents_stripe",
-      "count": 8
+      "count": 9
     },
     {
       "type": "pending_suspension",
@@ -50,15 +52,15 @@
       "count": 5
     },
     {
+      "type": "reject_shopify_payments",
+      "count": 4
+    },
+    {
       "type": "hold_payout",
       "count": 3
     },
     {
       "type": "content_removal_and_enable_payouts",
-      "count": 3
-    },
-    {
-      "type": "reject_shopify_payments",
       "count": 3
     },
     {
@@ -79,8 +81,8 @@
     },
     {
       "type": "still_open",
-      "count": 1
+      "count": 2
     }
   ],
-  "updatedAt": "2026-04-23T17:15:10Z"
+  "updatedAt": "2026-04-23T17:19:44Z"
 }
