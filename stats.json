@@ -2,30 +2,30 @@
   "date": "2026-04-23",
   "pq": 20,
   "pqLastSeenOpen": [
-    "e3f981ca-e537-4f5f-bd9f-cced08ef547c",
-    "59ed275b-49d8-4029-aae1-25f5c875564b",
-    "a087a89f-0fe9-4974-94c9-61731df06e18",
-    "b719ed69-4bb0-42ec-8e59-05a1cd0a7ae6",
-    "4381f7d3-1c41-4985-bbc8-5038940f206b",
-    "2cb1afaf-4192-4b68-ae8b-28fd0945fe9b",
-    "060c811e-0a40-4290-a65b-dd9c5068d9cb",
-    "a40b52b0-ca46-4bdb-8458-964a37ef6826",
-    "cf8dcc44-5d9d-442d-8d0e-c199325a1259",
-    "62378133-1efd-40c0-a8aa-57cc9b70e3b5",
-    "601899f2-a27b-4897-bcb7-3eb376c72007",
-    "78598037-9466-41bb-81a9-3bd6e5a17edc",
-    "ada99a89-690b-489f-8398-c000c2b8473b",
-    "7d066fb7-707e-4562-8257-49e9dd112634",
     "f324fb29-d78b-4e1a-99eb-e782e9c4d579",
-    "e9da72c9-c30c-4cb2-b51d-226c9920c899",
-    "b00724fa-b115-4c49-b30d-e8c52d751338",
-    "1701d9e7-6156-4357-8e80-6d8cd44a77fb",
+    "060c811e-0a40-4290-a65b-dd9c5068d9cb",
+    "78598037-9466-41bb-81a9-3bd6e5a17edc",
+    "cf8dcc44-5d9d-442d-8d0e-c199325a1259",
     "58e9d237-7776-480a-a70d-0c9bb2f30351",
-    "a0f7bac6-875a-4998-8675-c8574cf083c2"
+    "b00724fa-b115-4c49-b30d-e8c52d751338",
+    "2cb1afaf-4192-4b68-ae8b-28fd0945fe9b",
+    "a087a89f-0fe9-4974-94c9-61731df06e18",
+    "7d066fb7-707e-4562-8257-49e9dd112634",
+    "a40b52b0-ca46-4bdb-8458-964a37ef6826",
+    "62378133-1efd-40c0-a8aa-57cc9b70e3b5",
+    "1701d9e7-6156-4357-8e80-6d8cd44a77fb",
+    "601899f2-a27b-4897-bcb7-3eb376c72007",
+    "e3f981ca-e537-4f5f-bd9f-cced08ef547c",
+    "4381f7d3-1c41-4985-bbc8-5038940f206b",
+    "ada99a89-690b-489f-8398-c000c2b8473b",
+    "a0f7bac6-875a-4998-8675-c8574cf083c2",
+    "b719ed69-4bb0-42ec-8e59-05a1cd0a7ae6",
+    "e9da72c9-c30c-4cb2-b51d-226c9920c899",
+    "59ed275b-49d8-4029-aae1-25f5c875564b"
   ],
-  "pqActions": 18,
+  "pqActions": 19,
   "newTickets": 27,
-  "total": 45,
+  "total": 46,
   "typeBreakdown": [
     {
       "type": "pending_suspension",
@@ -36,12 +36,12 @@
       "count": 7
     },
     {
-      "type": "false_positive",
+      "type": "check_documents_stripe",
       "count": 6
     },
     {
-      "type": "check_documents_stripe",
-      "count": 5
+      "type": "false_positive",
+      "count": 6
     },
     {
       "type": "terminate_without_communications",
@@ -49,6 +49,10 @@
     },
     {
       "type": "hold_payout",
+      "count": 3
+    },
+    {
+      "type": "content_removal_and_enable_payouts",
       "count": 3
     },
     {
@@ -64,14 +68,6 @@
       "count": 2
     },
     {
-      "type": "content_removal_and_enable_payouts",
-      "count": 2
-    },
-    {
-      "type": "request_response",
-      "count": 1
-    },
-    {
       "type": "terminate_platform_supportability",
       "count": 1
     },
@@ -81,8 +77,8 @@
     },
     {
       "type": "still_open",
-      "count": 2
+      "count": 1
     }
   ],
-  "updatedAt": "2026-04-23T15:55:04Z"
+  "updatedAt": "2026-04-23T15:58:34Z"
 }
