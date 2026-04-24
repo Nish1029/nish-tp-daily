@@ -1,31 +1,36 @@
 {
   "date": "2026-04-24",
-  "pq": 13,
+  "pq": 14,
   "pqLastSeenOpen": [
-    "62378133-1efd-40c0-a8aa-57cc9b70e3b5",
-    "9d835736-4f60-475f-8d8c-1b13796de232",
-    "4c84373a-998a-4c9e-896c-0d63e81e3b08",
-    "8ffe0121-b8e2-444a-9478-0f5025e56d85",
     "4f46b774-50aa-49a8-9dbe-fb6d01dbde63",
-    "bfb3b3cb-005c-4f16-bbf1-9dea3cf313b3",
-    "32bc384d-d22b-4b61-b029-49e9b2dbccf7",
-    "2cb1afaf-4192-4b68-ae8b-28fd0945fe9b",
-    "0e892596-a780-4d30-b0a3-ce2967a607ef",
-    "fca9e375-b32a-4b6c-afc6-fdd1181e7b11",
-    "dc4d5c59-a8d2-44ac-9730-6782206d97dc",
     "6649add8-f7f7-42aa-a972-6c7fc4d9c15d",
-    "a087a89f-0fe9-4974-94c9-61731df06e18"
+    "4c84373a-998a-4c9e-896c-0d63e81e3b08",
+    "9d835736-4f60-475f-8d8c-1b13796de232",
+    "62378133-1efd-40c0-a8aa-57cc9b70e3b5",
+    "fca9e375-b32a-4b6c-afc6-fdd1181e7b11",
+    "2cb1afaf-4192-4b68-ae8b-28fd0945fe9b",
+    "bfb3b3cb-005c-4f16-bbf1-9dea3cf313b3",
+    "dc4d5c59-a8d2-44ac-9730-6782206d97dc",
+    "0e892596-a780-4d30-b0a3-ce2967a607ef",
+    "32bc384d-d22b-4b61-b029-49e9b2dbccf7",
+    "8ffe0121-b8e2-444a-9478-0f5025e56d85",
+    "a087a89f-0fe9-4974-94c9-61731df06e18",
+    "a09d58c2-3292-4907-b22e-f5eb5ae14187"
   ],
   "pqActions": 6,
-  "newTickets": 34,
-  "total": 40,
+  "newTickets": 39,
+  "total": 45,
   "typeBreakdown": [
     {
       "type": "marked_solved",
-      "count": 21
+      "count": 23
     },
     {
       "type": "pending_suspension",
+      "count": 4
+    },
+    {
+      "type": "reject_shopify_payments",
       "count": 4
     },
     {
@@ -33,11 +38,11 @@
       "count": 4
     },
     {
-      "type": "reject_shopify_payments",
+      "type": "email_merchant",
       "count": 3
     },
     {
-      "type": "email_merchant",
+      "type": "reject_without_communication",
       "count": 2
     },
     {
@@ -53,10 +58,6 @@
       "count": 1
     },
     {
-      "type": "reject_without_communication",
-      "count": 1
-    },
-    {
       "type": "accept_response_and_unsuspend",
       "count": 1
     },
@@ -66,8 +67,8 @@
     },
     {
       "type": "still_open",
-      "count": 7
+      "count": 8
     }
   ],
-  "updatedAt": "2026-04-24T15:39:03Z"
+  "updatedAt": "2026-04-24T15:42:28Z"
 }
