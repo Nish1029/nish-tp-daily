@@ -1,24 +1,29 @@
 {
   "date": "2026-04-24",
-  "pq": 9,
+  "pq": 10,
   "pqLastSeenOpen": [
     "a087a89f-0fe9-4974-94c9-61731df06e18",
-    "bfb3b3cb-005c-4f16-bbf1-9dea3cf313b3",
-    "2cb1afaf-4192-4b68-ae8b-28fd0945fe9b",
-    "6649add8-f7f7-42aa-a972-6c7fc4d9c15d",
     "8ffe0121-b8e2-444a-9478-0f5025e56d85",
-    "4f46b774-50aa-49a8-9dbe-fb6d01dbde63",
     "dc4d5c59-a8d2-44ac-9730-6782206d97dc",
     "9d835736-4f60-475f-8d8c-1b13796de232",
-    "32bc384d-d22b-4b61-b029-49e9b2dbccf7"
+    "4f46b774-50aa-49a8-9dbe-fb6d01dbde63",
+    "2cb1afaf-4192-4b68-ae8b-28fd0945fe9b",
+    "32bc384d-d22b-4b61-b029-49e9b2dbccf7",
+    "0e892596-a780-4d30-b0a3-ce2967a607ef",
+    "bfb3b3cb-005c-4f16-bbf1-9dea3cf313b3",
+    "6649add8-f7f7-42aa-a972-6c7fc4d9c15d"
   ],
-  "pqActions": 3,
-  "newTickets": 10,
-  "total": 13,
+  "pqActions": 6,
+  "newTickets": 13,
+  "total": 19,
   "typeBreakdown": [
     {
       "type": "marked_solved",
-      "count": 7
+      "count": 10
+    },
+    {
+      "type": "false_positive",
+      "count": 3
     },
     {
       "type": "email_merchant",
@@ -37,17 +42,17 @@
       "count": 1
     },
     {
+      "type": "accept_response_and_unsuspend",
+      "count": 1
+    },
+    {
       "type": "clear_and_enable_all",
       "count": 1
     },
     {
-      "type": "false_positive",
-      "count": 1
-    },
-    {
       "type": "still_open",
-      "count": 6
+      "count": 4
     }
   ],
-  "updatedAt": "2026-04-24T15:20:10Z"
+  "updatedAt": "2026-04-24T15:22:58Z"
 }
