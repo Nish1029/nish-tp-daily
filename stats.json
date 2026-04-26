@@ -2,44 +2,60 @@
   "date": "2026-04-25",
   "pq": 11,
   "pqLastSeenOpen": [
-    "2b47507a-7899-472c-bb82-c12618b94162",
-    "f9fc2d0e-9511-477e-baea-7e1fb1d35b84",
-    "9a85550a-1a98-48ae-9a86-43ece1782c14",
-    "4d188fff-d3c1-4638-bd51-301baaec8a35",
     "aa982328-9382-4429-aaa0-89557e3b75fb",
-    "e9da72c9-c30c-4cb2-b51d-226c9920c899",
-    "45b8f82d-5eff-4d59-b024-46caf0a01ec3",
+    "f9fc2d0e-9511-477e-baea-7e1fb1d35b84",
     "a8f78a42-06c4-4e82-adca-9ceb0d30f4ce",
+    "e9da72c9-c30c-4cb2-b51d-226c9920c899",
+    "4d188fff-d3c1-4638-bd51-301baaec8a35",
     "6f6a9037-0485-45d0-a72f-8fb2e47764f6",
+    "45b8f82d-5eff-4d59-b024-46caf0a01ec3",
+    "9a85550a-1a98-48ae-9a86-43ece1782c14",
     "7932cab7-95f1-4977-8422-5087b5d93788",
+    "2b47507a-7899-472c-bb82-c12618b94162",
     "f6cf136d-02c9-411d-bd27-72d2aa49f314"
   ],
   "pqActions": 11,
-  "newTickets": 7,
-  "total": 18,
+  "newTickets": 26,
+  "total": 37,
   "typeBreakdown": [
+    {
+      "type": "reject_shopify_payments",
+      "count": 9
+    },
     {
       "type": "marked_solved",
       "count": 7
     },
     {
       "type": "check_documents_stripe",
-      "count": 4
-    },
-    {
-      "type": "reject_shopify_payments",
-      "count": 2
+      "count": 5
     },
     {
       "type": "false_positive",
+      "count": 5
+    },
+    {
+      "type": "pending_suspension",
+      "count": 2
+    },
+    {
+      "type": "request_response",
       "count": 2
     },
     {
       "type": "email_merchant",
+      "count": 2
+    },
+    {
+      "type": "reject_shopify_payments_without_communications",
+      "count": 2
+    },
+    {
+      "type": "terminate_platform_supportability",
       "count": 1
     },
     {
-      "type": "pending_suspension",
+      "type": "content_removal_and_reject_shopify_payments",
       "count": 1
     },
     {
@@ -47,5 +63,5 @@
       "count": 1
     }
   ],
-  "updatedAt": "2026-04-26T01:13:39Z"
+  "updatedAt": "2026-04-26T02:33:27Z"
 }
