@@ -2,27 +2,35 @@
   "date": "2026-04-26",
   "pq": 12,
   "pqLastSeenOpen": [
-    "1d189c4d-ce4c-4f9a-97aa-1e0e08865282",
-    "53b48fa5-8ea8-47b5-8496-184eaa52ac37",
-    "794f4185-4b08-44cd-b72f-b569746dfd61",
-    "4879a753-d098-412c-b4fb-f9f26dc2b11f",
-    "94d43a0e-657e-4e13-a0d3-e610a808d269",
     "e7e351a1-ff98-4c32-810e-9d81c9ac3968",
+    "4879a753-d098-412c-b4fb-f9f26dc2b11f",
+    "53b48fa5-8ea8-47b5-8496-184eaa52ac37",
+    "cc2954b6-413b-40ff-a704-28614329f6c2",
     "6b0010a5-163c-4819-b21b-06fe40560aa6",
     "d5254db3-e1a8-489f-aa86-8982081680cb",
-    "cc2954b6-413b-40ff-a704-28614329f6c2",
+    "794f4185-4b08-44cd-b72f-b569746dfd61",
+    "e9da72c9-c30c-4cb2-b51d-226c9920c899",
     "d2593d54-b680-45c5-b2a0-8967534257c6",
-    "e5bc9206-2649-4036-94cf-183208c09f71",
-    "e9da72c9-c30c-4cb2-b51d-226c9920c899"
+    "94d43a0e-657e-4e13-a0d3-e610a808d269",
+    "1d189c4d-ce4c-4f9a-97aa-1e0e08865282",
+    "e5bc9206-2649-4036-94cf-183208c09f71"
   ],
-  "pqActions": 0,
+  "pqActions": 5,
   "newTickets": 0,
-  "total": 0,
+  "total": 5,
   "typeBreakdown": [
     {
+      "type": "false_positive",
+      "count": 4
+    },
+    {
+      "type": "content_removal_and_enable_payouts",
+      "count": 1
+    },
+    {
       "type": "still_open",
-      "count": 12
+      "count": 7
     }
   ],
-  "updatedAt": "2026-04-26T15:08:19Z"
+  "updatedAt": "2026-04-26T15:11:02Z"
 }
