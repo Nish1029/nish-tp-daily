@@ -2,37 +2,37 @@
   "date": "2026-04-26",
   "pq": 27,
   "pqLastSeenOpen": [
-    "e7e351a1-ff98-4c32-810e-9d81c9ac3968",
-    "94d43a0e-657e-4e13-a0d3-e610a808d269",
-    "956fa728-0520-4269-a756-888a488645b5",
-    "4879a753-d098-412c-b4fb-f9f26dc2b11f",
-    "a16d4fc2-dfec-429f-865a-80269b055a75",
-    "72f04b57-cf8e-4896-acb1-0304be9b0a6a",
-    "a13c354a-0c8a-4a1c-8c50-dd33da8d31ac",
-    "9d02601b-076a-4040-8c39-6c8416d94706",
-    "a23bb598-108f-4287-96c4-806a55570c42",
-    "d2593d54-b680-45c5-b2a0-8967534257c6",
     "2148da5d-fffb-4f68-9896-889d962cffa9",
-    "53b48fa5-8ea8-47b5-8496-184eaa52ac37",
-    "6b0010a5-163c-4819-b21b-06fe40560aa6",
-    "1d189c4d-ce4c-4f9a-97aa-1e0e08865282",
-    "d5254db3-e1a8-489f-aa86-8982081680cb",
-    "d0e334a3-6566-440d-b645-729d82d6aa0f",
-    "9ef266c2-045d-4068-b035-ce0fc26e29f1",
-    "5cee26f1-6b23-47fe-b780-dc5a634a9a62",
-    "26d30018-eaba-4090-ab79-dcad7cc84f46",
     "d8cb2832-b1e7-461c-a405-87708640ee7f",
-    "e5bc9206-2649-4036-94cf-183208c09f71",
-    "e9da72c9-c30c-4cb2-b51d-226c9920c899",
     "ab21ea55-bb5c-472a-a4d6-0f32db7b770b",
-    "371015b7-c453-498b-9748-5a446e128c67",
-    "794f4185-4b08-44cd-b72f-b569746dfd61",
+    "956fa728-0520-4269-a756-888a488645b5",
+    "94d43a0e-657e-4e13-a0d3-e610a808d269",
+    "1d189c4d-ce4c-4f9a-97aa-1e0e08865282",
     "cc2954b6-413b-40ff-a704-28614329f6c2",
-    "fb5a096d-b24f-409a-88e2-2ae4e140fd59"
+    "794f4185-4b08-44cd-b72f-b569746dfd61",
+    "5cee26f1-6b23-47fe-b780-dc5a634a9a62",
+    "a16d4fc2-dfec-429f-865a-80269b055a75",
+    "e9da72c9-c30c-4cb2-b51d-226c9920c899",
+    "9ef266c2-045d-4068-b035-ce0fc26e29f1",
+    "9d02601b-076a-4040-8c39-6c8416d94706",
+    "6b0010a5-163c-4819-b21b-06fe40560aa6",
+    "53b48fa5-8ea8-47b5-8496-184eaa52ac37",
+    "e7e351a1-ff98-4c32-810e-9d81c9ac3968",
+    "e5bc9206-2649-4036-94cf-183208c09f71",
+    "d2593d54-b680-45c5-b2a0-8967534257c6",
+    "72f04b57-cf8e-4896-acb1-0304be9b0a6a",
+    "fb5a096d-b24f-409a-88e2-2ae4e140fd59",
+    "d5254db3-e1a8-489f-aa86-8982081680cb",
+    "26d30018-eaba-4090-ab79-dcad7cc84f46",
+    "4879a753-d098-412c-b4fb-f9f26dc2b11f",
+    "371015b7-c453-498b-9748-5a446e128c67",
+    "d0e334a3-6566-440d-b645-729d82d6aa0f",
+    "a23bb598-108f-4287-96c4-806a55570c42",
+    "a13c354a-0c8a-4a1c-8c50-dd33da8d31ac"
   ],
   "pqActions": 27,
-  "newTickets": 24,
-  "total": 51,
+  "newTickets": 26,
+  "total": 53,
   "typeBreakdown": [
     {
       "type": "marked_solved",
@@ -43,11 +43,11 @@
       "count": 12
     },
     {
-      "type": "check_documents_stripe",
-      "count": 6
+      "type": "reject_shopify_payments",
+      "count": 7
     },
     {
-      "type": "reject_shopify_payments",
+      "type": "check_documents_stripe",
       "count": 6
     },
     {
@@ -63,6 +63,10 @@
       "count": 2
     },
     {
+      "type": "content_removal_and_enable_payouts",
+      "count": 2
+    },
+    {
       "type": "email_merchant",
       "count": 2
     },
@@ -73,11 +77,7 @@
     {
       "type": "terminate_without_communications",
       "count": 1
-    },
-    {
-      "type": "content_removal_and_enable_payouts",
-      "count": 1
     }
   ],
-  "updatedAt": "2026-04-26T19:39:07Z"
+  "updatedAt": "2026-04-26T19:43:09Z"
 }
