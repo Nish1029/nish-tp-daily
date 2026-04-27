@@ -1,31 +1,32 @@
 {
   "date": "2026-04-27",
-  "pq": 24,
+  "pq": 25,
   "pqLastSeenOpen": [
-    "6b0010a5-163c-4819-b21b-06fe40560aa6",
-    "e0cd2892-b6a7-4ae8-bcf0-5e9da7d3a7b8",
     "62378133-1efd-40c0-a8aa-57cc9b70e3b5",
-    "a09d58c2-3292-4907-b22e-f5eb5ae14187",
-    "78598037-9466-41bb-81a9-3bd6e5a17edc",
-    "ce5cc545-a132-49bc-ad93-8091117f0689",
-    "378a6037-51a7-4a9d-a908-66e8678702dd",
-    "612fd25a-0eef-4fa4-854a-64fed9616ef3",
     "f676f671-8c63-4ccc-a143-8e97abaa00d5",
-    "63e689d1-0d53-4aa4-907b-67f7ace5c574",
-    "ec1bd8e3-b114-4071-b60c-ffd67d4cbcbd",
-    "f8f97a45-27ed-40ac-bdc9-b9fd80767aa4",
+    "ce5cc545-a132-49bc-ad93-8091117f0689",
+    "5c066175-3037-446e-8875-65aa4da433e8",
+    "e0cd2892-b6a7-4ae8-bcf0-5e9da7d3a7b8",
+    "cf2d11a3-367c-465e-8cf0-430392920d07",
     "861c8dbe-6109-4800-ade6-e74f9d6101c4",
+    "ce1a346a-88f8-42eb-ae5e-90e031ecae70",
     "fa3d20bd-f4cb-4dfd-bb64-0fe69447d289",
-    "45b8f82d-5eff-4d59-b024-46caf0a01ec3",
     "27ee95ea-998b-4799-99da-72330ebb0532",
     "fadf5ece-404c-42ea-a983-509a490ce8e5",
-    "cea0c927-dbc3-4146-8dda-af4ecd84864e",
-    "c23efa6d-264f-48b5-9611-ee29e8b07c57",
-    "921b6563-9616-4d38-ba47-476929cd03be",
     "07a1e728-7b55-4bac-9780-9e54a9d70343",
-    "cf2d11a3-367c-465e-8cf0-430392920d07",
-    "5c066175-3037-446e-8875-65aa4da433e8",
-    "ce1a346a-88f8-42eb-ae5e-90e031ecae70"
+    "45b8f82d-5eff-4d59-b024-46caf0a01ec3",
+    "921b6563-9616-4d38-ba47-476929cd03be",
+    "63e689d1-0d53-4aa4-907b-67f7ace5c574",
+    "378a6037-51a7-4a9d-a908-66e8678702dd",
+    "f8f97a45-27ed-40ac-bdc9-b9fd80767aa4",
+    "6b0010a5-163c-4819-b21b-06fe40560aa6",
+    "c23efa6d-264f-48b5-9611-ee29e8b07c57",
+    "78598037-9466-41bb-81a9-3bd6e5a17edc",
+    "d95776af-d117-4936-b50a-b19380305540",
+    "ec1bd8e3-b114-4071-b60c-ffd67d4cbcbd",
+    "a09d58c2-3292-4907-b22e-f5eb5ae14187",
+    "612fd25a-0eef-4fa4-854a-64fed9616ef3",
+    "cea0c927-dbc3-4146-8dda-af4ecd84864e"
   ],
   "pqActions": 24,
   "newTickets": 21,
@@ -74,7 +75,11 @@
     {
       "type": "clear_and_enable_all",
       "count": 1
+    },
+    {
+      "type": "still_open",
+      "count": 1
     }
   ],
-  "updatedAt": "2026-04-27T14:45:33Z"
+  "updatedAt": "2026-04-27T14:49:04Z"
 }
