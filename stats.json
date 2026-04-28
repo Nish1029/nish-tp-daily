@@ -6,28 +6,28 @@
     "a0707898-fbbe-4310-b9f4-e42fded0023d",
     "346a0a85-617b-4989-b90a-fd90836c0fe2"
   ],
-  "pqActions": 0,
+  "pqActions": 2,
   "newTickets": 53,
-  "total": 53,
+  "total": 55,
   "typeBreakdown": [
     {
       "type": "marked_solved",
       "count": 16
     },
     {
+      "type": "false_positive",
+      "count": 8
+    },
+    {
       "type": "reject_shopify_payments",
       "count": 8
     },
     {
-      "type": "false_positive",
-      "count": 7
+      "type": "check_documents_stripe",
+      "count": 5
     },
     {
       "type": "pending_suspension",
-      "count": 4
-    },
-    {
-      "type": "check_documents_stripe",
       "count": 4
     },
     {
@@ -68,8 +68,8 @@
     },
     {
       "type": "still_open",
-      "count": 3
+      "count": 1
     }
   ],
-  "updatedAt": "2026-04-28T14:42:07Z"
+  "updatedAt": "2026-04-28T14:46:33Z"
 }
