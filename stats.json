@@ -1,14 +1,16 @@
 {
   "date": "2026-04-28",
-  "pq": 3,
+  "pq": 5,
   "pqLastSeenOpen": [
+    "346a0a85-617b-4989-b90a-fd90836c0fe2",
     "a09d58c2-3292-4907-b22e-f5eb5ae14187",
+    "78598037-9466-41bb-81a9-3bd6e5a17edc",
     "a0707898-fbbe-4310-b9f4-e42fded0023d",
-    "346a0a85-617b-4989-b90a-fd90836c0fe2"
+    "59ed275b-49d8-4029-aae1-25f5c875564b"
   ],
   "pqActions": 2,
-  "newTickets": 53,
-  "total": 55,
+  "newTickets": 52,
+  "total": 54,
   "typeBreakdown": [
     {
       "type": "marked_solved",
@@ -20,7 +22,7 @@
     },
     {
       "type": "reject_shopify_payments",
-      "count": 8
+      "count": 7
     },
     {
       "type": "check_documents_stripe",
@@ -68,8 +70,8 @@
     },
     {
       "type": "still_open",
-      "count": 1
+      "count": 3
     }
   ],
-  "updatedAt": "2026-04-28T14:46:33Z"
+  "updatedAt": "2026-04-28T14:50:48Z"
 }
