@@ -2,29 +2,29 @@
   "date": "2026-04-29",
   "pq": 19,
   "pqLastSeenOpen": [
-    "6b60c9c8-123c-456f-804f-8017f667b430",
-    "fa3d20bd-f4cb-4dfd-bb64-0fe69447d289",
-    "346a0a85-617b-4989-b90a-fd90836c0fe2",
-    "f4b71333-3a70-4426-a665-b3a7dfec7571",
-    "5c08d5d6-6d4a-4830-a6dd-b9e85f6c6b7c",
-    "bbd58b56-9228-48c1-abc8-e4b7c51ea730",
-    "499ea5c7-a060-47be-a032-c7f5506e2d6d",
-    "cb4964c0-62f2-48cb-b87f-9545ff1867e9",
-    "41404b82-f524-4294-a2cc-1839ee543d4f",
-    "29c358b1-6366-4fe3-8a08-96786f451b52",
-    "937dddaf-5c27-45a8-aa11-05f0c994b58e",
-    "d106e4c5-fe8e-4692-b731-58f4e74584f8",
-    "2c9900ac-9e5c-4bd5-8d86-f7434783e3dc",
-    "e5318f31-b223-4b32-99d9-b953dcb44dee",
-    "b01e7196-0502-4b61-ae1c-1c498691e910",
-    "63b29749-1b81-4f14-b4bf-1e33f797d484",
-    "84ac5d30-6f75-4e57-b26d-bdb9b8b0f295",
     "7bee68b1-bae5-48ec-abd6-823f67b02872",
-    "897bcffa-1bad-43db-bcdf-a0c7ae1bb708"
+    "b01e7196-0502-4b61-ae1c-1c498691e910",
+    "2c9900ac-9e5c-4bd5-8d86-f7434783e3dc",
+    "499ea5c7-a060-47be-a032-c7f5506e2d6d",
+    "f4b71333-3a70-4426-a665-b3a7dfec7571",
+    "bbd58b56-9228-48c1-abc8-e4b7c51ea730",
+    "d106e4c5-fe8e-4692-b731-58f4e74584f8",
+    "e5318f31-b223-4b32-99d9-b953dcb44dee",
+    "937dddaf-5c27-45a8-aa11-05f0c994b58e",
+    "6b60c9c8-123c-456f-804f-8017f667b430",
+    "346a0a85-617b-4989-b90a-fd90836c0fe2",
+    "cb4964c0-62f2-48cb-b87f-9545ff1867e9",
+    "5c08d5d6-6d4a-4830-a6dd-b9e85f6c6b7c",
+    "84ac5d30-6f75-4e57-b26d-bdb9b8b0f295",
+    "fa3d20bd-f4cb-4dfd-bb64-0fe69447d289",
+    "63b29749-1b81-4f14-b4bf-1e33f797d484",
+    "897bcffa-1bad-43db-bcdf-a0c7ae1bb708",
+    "41404b82-f524-4294-a2cc-1839ee543d4f",
+    "29c358b1-6366-4fe3-8a08-96786f451b52"
   ],
-  "pqActions": 7,
+  "pqActions": 8,
   "newTickets": 2,
-  "total": 9,
+  "total": 10,
   "typeBreakdown": [
     {
       "type": "email_merchant",
@@ -32,7 +32,7 @@
     },
     {
       "type": "marked_solved",
-      "count": 3
+      "count": 4
     },
     {
       "type": "false_positive",
@@ -44,8 +44,8 @@
     },
     {
       "type": "still_open",
-      "count": 12
+      "count": 11
     }
   ],
-  "updatedAt": "2026-04-29T12:01:19Z"
+  "updatedAt": "2026-04-29T12:04:29Z"
 }
