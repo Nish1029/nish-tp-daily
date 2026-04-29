@@ -1,30 +1,31 @@
 {
   "date": "2026-04-29",
-  "pq": 23,
+  "pq": 24,
   "pqLastSeenOpen": [
     "29c358b1-6366-4fe3-8a08-96786f451b52",
-    "7bee68b1-bae5-48ec-abd6-823f67b02872",
-    "fa3d20bd-f4cb-4dfd-bb64-0fe69447d289",
-    "499ea5c7-a060-47be-a032-c7f5506e2d6d",
-    "937dddaf-5c27-45a8-aa11-05f0c994b58e",
-    "f4b71333-3a70-4426-a665-b3a7dfec7571",
     "d22a4812-d883-4432-aa2a-761ffc32310b",
+    "499ea5c7-a060-47be-a032-c7f5506e2d6d",
+    "b00ccb57-39df-42b9-854f-4ef6f0926ec5",
+    "7bee68b1-bae5-48ec-abd6-823f67b02872",
     "e5318f31-b223-4b32-99d9-b953dcb44dee",
-    "346a0a85-617b-4989-b90a-fd90836c0fe2",
-    "897bcffa-1bad-43db-bcdf-a0c7ae1bb708",
-    "7ad5daa5-8baf-41e7-96f6-fbd4b99cb9de",
-    "b01e7196-0502-4b61-ae1c-1c498691e910",
-    "cb4964c0-62f2-48cb-b87f-9545ff1867e9",
-    "5c08d5d6-6d4a-4830-a6dd-b9e85f6c6b7c",
-    "d106e4c5-fe8e-4692-b731-58f4e74584f8",
-    "bbd58b56-9228-48c1-abc8-e4b7c51ea730",
+    "f4b71333-3a70-4426-a665-b3a7dfec7571",
     "84ac5d30-6f75-4e57-b26d-bdb9b8b0f295",
+    "6b60c9c8-123c-456f-804f-8017f667b430",
     "2c9900ac-9e5c-4bd5-8d86-f7434783e3dc",
-    "59f83143-0244-4c28-9c3e-f1693c207cd9",
-    "f66a8ef7-cc95-4925-91a6-1e52d0ea3da1",
     "63b29749-1b81-4f14-b4bf-1e33f797d484",
+    "59f83143-0244-4c28-9c3e-f1693c207cd9",
+    "7ad5daa5-8baf-41e7-96f6-fbd4b99cb9de",
+    "897bcffa-1bad-43db-bcdf-a0c7ae1bb708",
+    "d106e4c5-fe8e-4692-b731-58f4e74584f8",
+    "cb4964c0-62f2-48cb-b87f-9545ff1867e9",
+    "346a0a85-617b-4989-b90a-fd90836c0fe2",
     "41404b82-f524-4294-a2cc-1839ee543d4f",
-    "6b60c9c8-123c-456f-804f-8017f667b430"
+    "fa3d20bd-f4cb-4dfd-bb64-0fe69447d289",
+    "937dddaf-5c27-45a8-aa11-05f0c994b58e",
+    "b01e7196-0502-4b61-ae1c-1c498691e910",
+    "5c08d5d6-6d4a-4830-a6dd-b9e85f6c6b7c",
+    "bbd58b56-9228-48c1-abc8-e4b7c51ea730",
+    "f66a8ef7-cc95-4925-91a6-1e52d0ea3da1"
   ],
   "pqActions": 22,
   "newTickets": 4,
@@ -56,8 +57,8 @@
     },
     {
       "type": "still_open",
-      "count": 1
+      "count": 2
     }
   ],
-  "updatedAt": "2026-04-29T13:47:48Z"
+  "updatedAt": "2026-04-29T13:50:47Z"
 }
