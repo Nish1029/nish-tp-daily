@@ -3,15 +3,19 @@
   "pq": 5,
   "pqLastSeenOpen": [
     "a8f78a42-06c4-4e82-adca-9ceb0d30f4ce",
+    "fa883dea-a3b0-4300-8d89-bcbc90d07e7c",
     "a087a89f-0fe9-4974-94c9-61731df06e18",
     "db44f361-b6bc-4ae2-ac7e-0d5e64383abf",
-    "fa883dea-a3b0-4300-8d89-bcbc90d07e7c",
     "8163629e-f1dc-485f-b84b-8a348cc66554"
   ],
-  "pqActions": 4,
+  "pqActions": 5,
   "newTickets": 4,
-  "total": 8,
+  "total": 9,
   "typeBreakdown": [
+    {
+      "type": "check_documents_stripe",
+      "count": 2
+    },
     {
       "type": "terminate_platform_supportability",
       "count": 2
@@ -25,21 +29,13 @@
       "count": 1
     },
     {
-      "type": "check_documents_stripe",
-      "count": 1
-    },
-    {
       "type": "hold_payout",
       "count": 1
     },
     {
       "type": "reject_without_communication",
       "count": 1
-    },
-    {
-      "type": "still_open",
-      "count": 1
     }
   ],
-  "updatedAt": "2026-04-30T10:33:54Z"
+  "updatedAt": "2026-04-30T10:36:29Z"
 }
