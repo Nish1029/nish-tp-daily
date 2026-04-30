@@ -2,16 +2,20 @@
   "date": "2026-04-30",
   "pq": 5,
   "pqLastSeenOpen": [
-    "a8f78a42-06c4-4e82-adca-9ceb0d30f4ce",
     "a087a89f-0fe9-4974-94c9-61731df06e18",
-    "fa883dea-a3b0-4300-8d89-bcbc90d07e7c",
     "8163629e-f1dc-485f-b84b-8a348cc66554",
-    "db44f361-b6bc-4ae2-ac7e-0d5e64383abf"
+    "db44f361-b6bc-4ae2-ac7e-0d5e64383abf",
+    "fa883dea-a3b0-4300-8d89-bcbc90d07e7c",
+    "a8f78a42-06c4-4e82-adca-9ceb0d30f4ce"
   ],
   "pqActions": 5,
-  "newTickets": 4,
-  "total": 9,
+  "newTickets": 5,
+  "total": 10,
   "typeBreakdown": [
+    {
+      "type": "pending_suspension",
+      "count": 2
+    },
     {
       "type": "check_documents_stripe",
       "count": 2
@@ -25,10 +29,6 @@
       "count": 2
     },
     {
-      "type": "pending_suspension",
-      "count": 1
-    },
-    {
       "type": "hold_payout",
       "count": 1
     },
@@ -37,5 +37,5 @@
       "count": 1
     }
   ],
-  "updatedAt": "2026-04-30T10:44:36Z"
+  "updatedAt": "2026-04-30T10:47:13Z"
 }
