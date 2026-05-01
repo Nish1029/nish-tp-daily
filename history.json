@@ -106,5 +106,11 @@
     "pqActions": 43,
     "newTickets": 31,
     "total": 74
+  },
+  "2026-05-01": {
+    "pq": 7,
+    "pqActions": 0,
+    "newTickets": 0,
+    "total": 0
   }
 }
