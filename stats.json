@@ -2,40 +2,40 @@
   "date": "2026-05-01",
   "pq": 26,
   "pqLastSeenOpen": [
-    "499ea5c7-a060-47be-a032-c7f5506e2d6d",
-    "b6c7f102-12bb-4943-b255-93536c8b17c6",
-    "a09d58c2-3292-4907-b22e-f5eb5ae14187",
     "76de325d-da78-4d45-8329-b4fbe7c82b3c",
-    "4965d481-1824-4576-9b96-e5e149dbddbe",
-    "68642630-d989-43b9-bf8b-3b02f040eb89",
-    "d71e6655-4cb8-4f8d-ad5e-55459ed72857",
     "666e025d-9acc-4358-8bc0-f66e276713c7",
-    "7efd2c64-a82c-44e8-9877-0c86dccd5fbc",
-    "17ea83d6-dcdb-4c47-ad5e-62d0df28804f",
-    "1d349b73-9b19-4cd5-85ab-2d705499a896",
-    "4986e32c-4e05-4ed8-89eb-2b8634889b7a",
-    "6860402d-2dd4-4f39-adfe-ab9f62507b9f",
-    "ec232881-9980-444d-91d4-acb0f38b1e1f",
     "5fe73419-cea3-49b7-960a-0863ff1c7590",
-    "dac8df42-b999-49cb-bf62-dc56dd9b8350",
     "5618153a-f5ff-4aac-9a85-339a8ccb8275",
-    "99c23037-33d3-4396-a453-b210323fbd83",
-    "a087a89f-0fe9-4974-94c9-61731df06e18",
-    "9885f910-4bb0-43dc-9ee7-02ff9a75674d",
-    "8d6ab3d8-670c-4fec-baf9-6f8912e94317",
-    "621e1549-bd33-4aa1-8d56-a7864ad1d0a2",
-    "5c08d5d6-6d4a-4830-a6dd-b9e85f6c6b7c",
     "d37b0ffd-89e9-476a-b4f0-807bcbd10573",
+    "b6c7f102-12bb-4943-b255-93536c8b17c6",
+    "dac8df42-b999-49cb-bf62-dc56dd9b8350",
+    "8d6ab3d8-670c-4fec-baf9-6f8912e94317",
+    "7efd2c64-a82c-44e8-9877-0c86dccd5fbc",
+    "4986e32c-4e05-4ed8-89eb-2b8634889b7a",
+    "1d349b73-9b19-4cd5-85ab-2d705499a896",
+    "9885f910-4bb0-43dc-9ee7-02ff9a75674d",
+    "4965d481-1824-4576-9b96-e5e149dbddbe",
+    "5b3325c2-6428-470d-bc55-b5d5c61ff5d7",
+    "6860402d-2dd4-4f39-adfe-ab9f62507b9f",
+    "17ea83d6-dcdb-4c47-ad5e-62d0df28804f",
+    "621e1549-bd33-4aa1-8d56-a7864ad1d0a2",
+    "a087a89f-0fe9-4974-94c9-61731df06e18",
+    "a09d58c2-3292-4907-b22e-f5eb5ae14187",
+    "68642630-d989-43b9-bf8b-3b02f040eb89",
+    "499ea5c7-a060-47be-a032-c7f5506e2d6d",
     "99610205-e467-4c8b-9078-184f2acdab79",
-    "5b3325c2-6428-470d-bc55-b5d5c61ff5d7"
+    "5c08d5d6-6d4a-4830-a6dd-b9e85f6c6b7c",
+    "99c23037-33d3-4396-a453-b210323fbd83",
+    "ec232881-9980-444d-91d4-acb0f38b1e1f",
+    "d71e6655-4cb8-4f8d-ad5e-55459ed72857"
   ],
   "pqActions": 25,
-  "newTickets": 22,
-  "total": 47,
+  "newTickets": 23,
+  "total": 48,
   "typeBreakdown": [
     {
       "type": "check_documents_stripe",
-      "count": 9
+      "count": 10
     },
     {
       "type": "marked_solved",
@@ -86,5 +86,5 @@
       "count": 1
     }
   ],
-  "updatedAt": "2026-05-01T22:16:49Z"
+  "updatedAt": "2026-05-01T22:20:01Z"
 }
