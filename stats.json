@@ -2,20 +2,24 @@
   "date": "2026-05-01",
   "pq": 9,
   "pqLastSeenOpen": [
-    "a09d58c2-3292-4907-b22e-f5eb5ae14187",
     "68642630-d989-43b9-bf8b-3b02f040eb89",
+    "99610205-e467-4c8b-9078-184f2acdab79",
+    "621e1549-bd33-4aa1-8d56-a7864ad1d0a2",
+    "6860402d-2dd4-4f39-adfe-ab9f62507b9f",
+    "b6c7f102-12bb-4943-b255-93536c8b17c6",
     "9885f910-4bb0-43dc-9ee7-02ff9a75674d",
     "5fe73419-cea3-49b7-960a-0863ff1c7590",
     "666e025d-9acc-4358-8bc0-f66e276713c7",
-    "b6c7f102-12bb-4943-b255-93536c8b17c6",
-    "6860402d-2dd4-4f39-adfe-ab9f62507b9f",
-    "99610205-e467-4c8b-9078-184f2acdab79",
-    "621e1549-bd33-4aa1-8d56-a7864ad1d0a2"
+    "a09d58c2-3292-4907-b22e-f5eb5ae14187"
   ],
-  "pqActions": 6,
+  "pqActions": 7,
   "newTickets": 0,
-  "total": 6,
+  "total": 7,
   "typeBreakdown": [
+    {
+      "type": "email_merchant",
+      "count": 2
+    },
     {
       "type": "content_removal_and_enable_payouts",
       "count": 2
@@ -25,17 +29,13 @@
       "count": 2
     },
     {
-      "type": "email_merchant",
-      "count": 1
-    },
-    {
       "type": "terminate_platform_supportability",
       "count": 1
     },
     {
       "type": "still_open",
-      "count": 3
+      "count": 2
     }
   ],
-  "updatedAt": "2026-05-01T10:07:29Z"
+  "updatedAt": "2026-05-01T10:09:53Z"
 }
