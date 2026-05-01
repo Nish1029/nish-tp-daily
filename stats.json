@@ -2,28 +2,32 @@
   "date": "2026-05-01",
   "pq": 14,
   "pqLastSeenOpen": [
+    "621e1549-bd33-4aa1-8d56-a7864ad1d0a2",
+    "76de325d-da78-4d45-8329-b4fbe7c82b3c",
     "b6c7f102-12bb-4943-b255-93536c8b17c6",
     "68642630-d989-43b9-bf8b-3b02f040eb89",
+    "5fe73419-cea3-49b7-960a-0863ff1c7590",
+    "9885f910-4bb0-43dc-9ee7-02ff9a75674d",
+    "6860402d-2dd4-4f39-adfe-ab9f62507b9f",
     "499ea5c7-a060-47be-a032-c7f5506e2d6d",
-    "a09d58c2-3292-4907-b22e-f5eb5ae14187",
-    "17ea83d6-dcdb-4c47-ad5e-62d0df28804f",
     "99610205-e467-4c8b-9078-184f2acdab79",
     "8d6ab3d8-670c-4fec-baf9-6f8912e94317",
-    "9885f910-4bb0-43dc-9ee7-02ff9a75674d",
-    "621e1549-bd33-4aa1-8d56-a7864ad1d0a2",
-    "6860402d-2dd4-4f39-adfe-ab9f62507b9f",
-    "5fe73419-cea3-49b7-960a-0863ff1c7590",
-    "5b3325c2-6428-470d-bc55-b5d5c61ff5d7",
+    "a09d58c2-3292-4907-b22e-f5eb5ae14187",
+    "17ea83d6-dcdb-4c47-ad5e-62d0df28804f",
     "666e025d-9acc-4358-8bc0-f66e276713c7",
-    "76de325d-da78-4d45-8329-b4fbe7c82b3c"
+    "5b3325c2-6428-470d-bc55-b5d5c61ff5d7"
   ],
-  "pqActions": 9,
+  "pqActions": 11,
   "newTickets": 11,
-  "total": 20,
+  "total": 22,
   "typeBreakdown": [
     {
       "type": "reject_shopify_payments",
       "count": 4
+    },
+    {
+      "type": "email_merchant",
+      "count": 3
     },
     {
       "type": "check_documents_stripe",
@@ -46,10 +50,6 @@
       "count": 2
     },
     {
-      "type": "email_merchant",
-      "count": 1
-    },
-    {
       "type": "terminate_platform_supportability",
       "count": 1
     },
@@ -59,8 +59,8 @@
     },
     {
       "type": "still_open",
-      "count": 5
+      "count": 3
     }
   ],
-  "updatedAt": "2026-05-01T13:49:40Z"
+  "updatedAt": "2026-05-01T13:52:16Z"
 }
