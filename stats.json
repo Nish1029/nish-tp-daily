@@ -3,22 +3,22 @@
   "pq": 13,
   "pqLastSeenOpen": [
     "76de325d-da78-4d45-8329-b4fbe7c82b3c",
-    "17ea83d6-dcdb-4c47-ad5e-62d0df28804f",
-    "5b3325c2-6428-470d-bc55-b5d5c61ff5d7",
     "666e025d-9acc-4358-8bc0-f66e276713c7",
-    "a09d58c2-3292-4907-b22e-f5eb5ae14187",
-    "b6c7f102-12bb-4943-b255-93536c8b17c6",
-    "99610205-e467-4c8b-9078-184f2acdab79",
+    "5b3325c2-6428-470d-bc55-b5d5c61ff5d7",
     "621e1549-bd33-4aa1-8d56-a7864ad1d0a2",
+    "99610205-e467-4c8b-9078-184f2acdab79",
+    "17ea83d6-dcdb-4c47-ad5e-62d0df28804f",
+    "a09d58c2-3292-4907-b22e-f5eb5ae14187",
     "5fe73419-cea3-49b7-960a-0863ff1c7590",
-    "6860402d-2dd4-4f39-adfe-ab9f62507b9f",
-    "9885f910-4bb0-43dc-9ee7-02ff9a75674d",
     "8d6ab3d8-670c-4fec-baf9-6f8912e94317",
-    "68642630-d989-43b9-bf8b-3b02f040eb89"
+    "68642630-d989-43b9-bf8b-3b02f040eb89",
+    "6860402d-2dd4-4f39-adfe-ab9f62507b9f",
+    "b6c7f102-12bb-4943-b255-93536c8b17c6",
+    "9885f910-4bb0-43dc-9ee7-02ff9a75674d"
   ],
   "pqActions": 9,
-  "newTickets": 9,
-  "total": 18,
+  "newTickets": 10,
+  "total": 19,
   "typeBreakdown": [
     {
       "type": "check_documents_stripe",
@@ -33,6 +33,10 @@
       "count": 3
     },
     {
+      "type": "pending_suspension",
+      "count": 2
+    },
+    {
       "type": "email_merchant",
       "count": 2
     },
@@ -43,10 +47,6 @@
     {
       "type": "content_removal_and_enable_payouts",
       "count": 2
-    },
-    {
-      "type": "pending_suspension",
-      "count": 1
     },
     {
       "type": "terminate_platform_supportability",
@@ -61,5 +61,5 @@
       "count": 4
     }
   ],
-  "updatedAt": "2026-05-01T13:28:17Z"
+  "updatedAt": "2026-05-01T13:30:51Z"
 }
