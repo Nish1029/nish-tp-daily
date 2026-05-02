@@ -1,20 +1,21 @@
 {
   "date": "2026-05-02",
-  "pq": 9,
+  "pq": 10,
   "pqLastSeenOpen": [
-    "b6c7f102-12bb-4943-b255-93536c8b17c6",
-    "2e14d865-f9d2-4d26-a7fd-be4168a2ac45",
-    "3fa4b506-f2a4-487c-882b-93921badb48c",
-    "a8f78a42-06c4-4e82-adca-9ceb0d30f4ce",
+    "d94485b2-09a8-4909-85b4-f5f944da67b5",
     "8d6ab3d8-670c-4fec-baf9-6f8912e94317",
     "7b7ff66f-445f-44ab-a8f4-8c5bb13b29db",
+    "765852f7-fb93-4b2a-89c0-a2d2c56513d1",
+    "2e14d865-f9d2-4d26-a7fd-be4168a2ac45",
+    "a8f78a42-06c4-4e82-adca-9ceb0d30f4ce",
     "30422eff-6f08-4f5d-bf75-c3952aa9bee0",
+    "b6c7f102-12bb-4943-b255-93536c8b17c6",
     "28e250cc-d164-4805-be2f-82f929d37c7d",
-    "765852f7-fb93-4b2a-89c0-a2d2c56513d1"
+    "3fa4b506-f2a4-487c-882b-93921badb48c"
   ],
-  "pqActions": 8,
-  "newTickets": 8,
-  "total": 16,
+  "pqActions": 9,
+  "newTickets": 9,
+  "total": 18,
   "typeBreakdown": [
     {
       "type": "check_documents_stripe",
@@ -27,6 +28,14 @@
     {
       "type": "email_merchant",
       "count": 2
+    },
+    {
+      "type": "marked_solved",
+      "count": 2
+    },
+    {
+      "type": "request_response",
+      "count": 1
     },
     {
       "type": "terminate_platform_supportability",
@@ -45,10 +54,6 @@
       "count": 1
     },
     {
-      "type": "marked_solved",
-      "count": 1
-    },
-    {
       "type": "content_removal_and_enable_payouts",
       "count": 1
     },
@@ -57,5 +62,5 @@
       "count": 1
     }
   ],
-  "updatedAt": "2026-05-02T13:28:18Z"
+  "updatedAt": "2026-05-02T13:31:28Z"
 }
