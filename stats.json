@@ -2,20 +2,20 @@
   "date": "2026-05-02",
   "pq": 10,
   "pqLastSeenOpen": [
-    "765852f7-fb93-4b2a-89c0-a2d2c56513d1",
-    "8d6ab3d8-670c-4fec-baf9-6f8912e94317",
-    "28e250cc-d164-4805-be2f-82f929d37c7d",
-    "30422eff-6f08-4f5d-bf75-c3952aa9bee0",
-    "7b7ff66f-445f-44ab-a8f4-8c5bb13b29db",
     "a8f78a42-06c4-4e82-adca-9ceb0d30f4ce",
+    "7b7ff66f-445f-44ab-a8f4-8c5bb13b29db",
+    "30422eff-6f08-4f5d-bf75-c3952aa9bee0",
     "3fa4b506-f2a4-487c-882b-93921badb48c",
     "d94485b2-09a8-4909-85b4-f5f944da67b5",
+    "765852f7-fb93-4b2a-89c0-a2d2c56513d1",
+    "8d6ab3d8-670c-4fec-baf9-6f8912e94317",
+    "b6c7f102-12bb-4943-b255-93536c8b17c6",
     "2e14d865-f9d2-4d26-a7fd-be4168a2ac45",
-    "b6c7f102-12bb-4943-b255-93536c8b17c6"
+    "28e250cc-d164-4805-be2f-82f929d37c7d"
   ],
   "pqActions": 9,
-  "newTickets": 11,
-  "total": 20,
+  "newTickets": 12,
+  "total": 21,
   "typeBreakdown": [
     {
       "type": "false_positive",
@@ -24,6 +24,10 @@
     {
       "type": "check_documents_stripe",
       "count": 4
+    },
+    {
+      "type": "pending_suspension",
+      "count": 2
     },
     {
       "type": "email_merchant",
@@ -39,10 +43,6 @@
     },
     {
       "type": "terminate_platform_supportability",
-      "count": 1
-    },
-    {
-      "type": "pending_suspension",
       "count": 1
     },
     {
@@ -62,5 +62,5 @@
       "count": 1
     }
   ],
-  "updatedAt": "2026-05-02T13:37:02Z"
+  "updatedAt": "2026-05-02T13:39:52Z"
 }
