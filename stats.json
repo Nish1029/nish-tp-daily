@@ -3,29 +3,37 @@
   "pq": 7,
   "pqLastSeenOpen": [
     "28e250cc-d164-4805-be2f-82f929d37c7d",
-    "3fa4b506-f2a4-487c-882b-93921badb48c",
-    "7b7ff66f-445f-44ab-a8f4-8c5bb13b29db",
+    "8d6ab3d8-670c-4fec-baf9-6f8912e94317",
     "b6c7f102-12bb-4943-b255-93536c8b17c6",
     "a8f78a42-06c4-4e82-adca-9ceb0d30f4ce",
-    "8d6ab3d8-670c-4fec-baf9-6f8912e94317",
-    "30422eff-6f08-4f5d-bf75-c3952aa9bee0"
+    "3fa4b506-f2a4-487c-882b-93921badb48c",
+    "30422eff-6f08-4f5d-bf75-c3952aa9bee0",
+    "7b7ff66f-445f-44ab-a8f4-8c5bb13b29db"
   ],
-  "pqActions": 2,
+  "pqActions": 5,
   "newTickets": 0,
-  "total": 2,
+  "total": 5,
   "typeBreakdown": [
+    {
+      "type": "check_documents_stripe",
+      "count": 2
+    },
+    {
+      "type": "email_merchant",
+      "count": 1
+    },
     {
       "type": "hold_payout",
       "count": 1
     },
     {
-      "type": "check_documents_stripe",
+      "type": "content_removal_and_enable_payouts",
       "count": 1
     },
     {
       "type": "still_open",
-      "count": 5
+      "count": 2
     }
   ],
-  "updatedAt": "2026-05-02T11:48:49Z"
+  "updatedAt": "2026-05-02T11:51:25Z"
 }
