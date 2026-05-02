@@ -2,22 +2,26 @@
   "date": "2026-05-02",
   "pq": 7,
   "pqLastSeenOpen": [
-    "8d6ab3d8-670c-4fec-baf9-6f8912e94317",
     "7b7ff66f-445f-44ab-a8f4-8c5bb13b29db",
     "30422eff-6f08-4f5d-bf75-c3952aa9bee0",
+    "3fa4b506-f2a4-487c-882b-93921badb48c",
     "b6c7f102-12bb-4943-b255-93536c8b17c6",
-    "28e250cc-d164-4805-be2f-82f929d37c7d",
+    "8d6ab3d8-670c-4fec-baf9-6f8912e94317",
     "a8f78a42-06c4-4e82-adca-9ceb0d30f4ce",
-    "3fa4b506-f2a4-487c-882b-93921badb48c"
+    "28e250cc-d164-4805-be2f-82f929d37c7d"
   ],
-  "pqActions": 0,
+  "pqActions": 1,
   "newTickets": 0,
-  "total": 0,
+  "total": 1,
   "typeBreakdown": [
     {
+      "type": "check_documents_stripe",
+      "count": 1
+    },
+    {
       "type": "still_open",
-      "count": 7
+      "count": 6
     }
   ],
-  "updatedAt": "2026-05-02T11:43:31Z"
+  "updatedAt": "2026-05-02T11:46:11Z"
 }
