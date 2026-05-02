@@ -2,23 +2,23 @@
   "date": "2026-05-02",
   "pq": 17,
   "pqLastSeenOpen": [
-    "765852f7-fb93-4b2a-89c0-a2d2c56513d1",
-    "12acb16f-adff-423d-933e-eb69c0a19fd9",
-    "09426bee-d78d-45d5-8d3b-f6685f7a05bf",
     "d94485b2-09a8-4909-85b4-f5f944da67b5",
     "28e250cc-d164-4805-be2f-82f929d37c7d",
     "76de325d-da78-4d45-8329-b4fbe7c82b3c",
-    "3fa4b506-f2a4-487c-882b-93921badb48c",
-    "a087a89f-0fe9-4974-94c9-61731df06e18",
-    "2e14d865-f9d2-4d26-a7fd-be4168a2ac45",
-    "30422eff-6f08-4f5d-bf75-c3952aa9bee0",
-    "5b3325c2-6428-470d-bc55-b5d5c61ff5d7",
-    "8d6ab3d8-670c-4fec-baf9-6f8912e94317",
-    "7b7ff66f-445f-44ab-a8f4-8c5bb13b29db",
+    "12acb16f-adff-423d-933e-eb69c0a19fd9",
     "b6c7f102-12bb-4943-b255-93536c8b17c6",
-    "a09d58c2-3292-4907-b22e-f5eb5ae14187",
     "a8f78a42-06c4-4e82-adca-9ceb0d30f4ce",
-    "0df11ff3-cfa7-4abd-93a0-597a198f3a0c"
+    "7b7ff66f-445f-44ab-a8f4-8c5bb13b29db",
+    "2e14d865-f9d2-4d26-a7fd-be4168a2ac45",
+    "09426bee-d78d-45d5-8d3b-f6685f7a05bf",
+    "5b3325c2-6428-470d-bc55-b5d5c61ff5d7",
+    "a09d58c2-3292-4907-b22e-f5eb5ae14187",
+    "0df11ff3-cfa7-4abd-93a0-597a198f3a0c",
+    "765852f7-fb93-4b2a-89c0-a2d2c56513d1",
+    "30422eff-6f08-4f5d-bf75-c3952aa9bee0",
+    "a087a89f-0fe9-4974-94c9-61731df06e18",
+    "8d6ab3d8-670c-4fec-baf9-6f8912e94317",
+    "3fa4b506-f2a4-487c-882b-93921badb48c"
   ],
   "pqActions": 15,
   "newTickets": 19,
@@ -81,5 +81,5 @@
       "count": 2
     }
   ],
-  "updatedAt": "2026-05-02T16:51:25Z"
+  "updatedAt": "2026-05-02T16:54:34Z"
 }
