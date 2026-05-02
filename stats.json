@@ -2,29 +2,29 @@
   "date": "2026-05-02",
   "pq": 8,
   "pqLastSeenOpen": [
-    "30422eff-6f08-4f5d-bf75-c3952aa9bee0",
-    "8d6ab3d8-670c-4fec-baf9-6f8912e94317",
     "b6c7f102-12bb-4943-b255-93536c8b17c6",
-    "7b7ff66f-445f-44ab-a8f4-8c5bb13b29db",
     "3fa4b506-f2a4-487c-882b-93921badb48c",
     "28e250cc-d164-4805-be2f-82f929d37c7d",
     "2e14d865-f9d2-4d26-a7fd-be4168a2ac45",
-    "a8f78a42-06c4-4e82-adca-9ceb0d30f4ce"
+    "a8f78a42-06c4-4e82-adca-9ceb0d30f4ce",
+    "7b7ff66f-445f-44ab-a8f4-8c5bb13b29db",
+    "8d6ab3d8-670c-4fec-baf9-6f8912e94317",
+    "30422eff-6f08-4f5d-bf75-c3952aa9bee0"
   ],
   "pqActions": 8,
-  "newTickets": 3,
-  "total": 11,
+  "newTickets": 4,
+  "total": 12,
   "typeBreakdown": [
     {
       "type": "check_documents_stripe",
       "count": 3
     },
     {
-      "type": "email_merchant",
-      "count": 2
+      "type": "false_positive",
+      "count": 3
     },
     {
-      "type": "false_positive",
+      "type": "email_merchant",
       "count": 2
     },
     {
@@ -44,5 +44,5 @@
       "count": 1
     }
   ],
-  "updatedAt": "2026-05-02T13:20:00Z"
+  "updatedAt": "2026-05-02T13:22:44Z"
 }
