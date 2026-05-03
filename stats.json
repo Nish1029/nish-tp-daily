@@ -2,79 +2,39 @@
   "date": "2026-05-03",
   "pq": 24,
   "pqLastSeenOpen": [
-    "71a37317-db5c-4b89-873d-43e2588588ba",
-    "d002b454-adda-48d4-b342-0926559d3283",
     "bf4f59b4-b9d6-44fa-8566-22cf894ae7eb",
-    "a229682a-5081-48db-95cc-cf659f7d21cd",
-    "a49f26fa-98ad-4dca-a511-bc867bda2025",
-    "b85f0e4d-5561-4dcf-813e-473df6098320",
-    "f2ae2ed8-868b-4641-90eb-f8a9afe7e613",
-    "e6d59bfd-1bc1-4e14-aaf4-aaa08f2f64a2",
-    "8c5447eb-3318-49f5-8eb4-f52362b14aca",
-    "765852f7-fb93-4b2a-89c0-a2d2c56513d1",
-    "499ea5c7-a060-47be-a032-c7f5506e2d6d",
-    "69f8e6a5-81f8-4530-acda-0e55b506bd46",
-    "10528ac6-073c-4d90-a5d0-1bcf60ee16b4",
-    "9a85550a-1a98-48ae-9a86-43ece1782c14",
-    "6d5af501-055f-4fcc-9613-e9be66a43548",
-    "dac8df42-b999-49cb-bf62-dc56dd9b8350",
+    "d002b454-adda-48d4-b342-0926559d3283",
     "4e90c0c9-01da-4f8e-b436-1bf4acbdcda2",
+    "f2ae2ed8-868b-4641-90eb-f8a9afe7e613",
+    "b85f0e4d-5561-4dcf-813e-473df6098320",
+    "6d5af501-055f-4fcc-9613-e9be66a43548",
+    "e6d59bfd-1bc1-4e14-aaf4-aaa08f2f64a2",
+    "dac8df42-b999-49cb-bf62-dc56dd9b8350",
+    "765852f7-fb93-4b2a-89c0-a2d2c56513d1",
+    "a49f26fa-98ad-4dca-a511-bc867bda2025",
     "5c08d5d6-6d4a-4830-a6dd-b9e85f6c6b7c",
-    "f4b71333-3a70-4426-a665-b3a7dfec7571",
-    "4b91280a-8298-448a-8955-b183324f3dbb",
-    "f26d2ae5-2e8d-42b0-a2fe-81966c8407dc",
+    "499ea5c7-a060-47be-a032-c7f5506e2d6d",
     "9b8ce0e9-c8a3-49ec-bbd2-564ace94f32a",
+    "4b91280a-8298-448a-8955-b183324f3dbb",
+    "69f8e6a5-81f8-4530-acda-0e55b506bd46",
+    "a229682a-5081-48db-95cc-cf659f7d21cd",
+    "9a85550a-1a98-48ae-9a86-43ece1782c14",
+    "f26d2ae5-2e8d-42b0-a2fe-81966c8407dc",
+    "8c5447eb-3318-49f5-8eb4-f52362b14aca",
     "bc83bb75-02d5-4367-95ff-30210352ca72",
-    "6ecda307-103a-44c9-85f1-bc303aa1b077"
+    "f4b71333-3a70-4426-a665-b3a7dfec7571",
+    "71a37317-db5c-4b89-873d-43e2588588ba",
+    "6ecda307-103a-44c9-85f1-bc303aa1b077",
+    "10528ac6-073c-4d90-a5d0-1bcf60ee16b4"
   ],
   "pqActions": 24,
   "newTickets": 21,
   "total": 45,
   "typeBreakdown": [
     {
-      "type": "terminate_without_communications",
-      "count": 14
-    },
-    {
-      "type": "marked_solved",
-      "count": 8
-    },
-    {
-      "type": "terminate_platform_supportability",
-      "count": 7
-    },
-    {
-      "type": "check_documents_stripe",
-      "count": 5
-    },
-    {
-      "type": "hold_payout",
-      "count": 4
-    },
-    {
-      "type": "email_merchant",
-      "count": 2
-    },
-    {
-      "type": "accept_response_and_unsuspend",
-      "count": 1
-    },
-    {
-      "type": "clear_and_enable_all",
-      "count": 1
-    },
-    {
-      "type": "content_removal_and_enable_payouts",
-      "count": 1
-    },
-    {
-      "type": "false_positive",
-      "count": 1
-    },
-    {
-      "type": "reject_shopify_payments",
-      "count": 1
+      "type": "still_open",
+      "count": 24
     }
   ],
-  "updatedAt": "2026-05-03T21:57:46Z"
+  "updatedAt": "2026-05-03T22:01:11Z"
 }
