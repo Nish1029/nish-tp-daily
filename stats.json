@@ -2,52 +2,52 @@
   "date": "2026-05-02",
   "pq": 38,
   "pqLastSeenOpen": [
-    "c5df9d2f-0fd2-467c-afc8-dfde6d82f486",
-    "765852f7-fb93-4b2a-89c0-a2d2c56513d1",
-    "eefcc932-52a4-4f1d-a4ff-3d01f590a4bb",
-    "5b3325c2-6428-470d-bc55-b5d5c61ff5d7",
-    "5853acbc-070f-4bc7-97d2-b3d09803589d",
-    "0df11ff3-cfa7-4abd-93a0-597a198f3a0c",
-    "09426bee-d78d-45d5-8d3b-f6685f7a05bf",
-    "a229682a-5081-48db-95cc-cf659f7d21cd",
-    "a087a89f-0fe9-4974-94c9-61731df06e18",
-    "8c5447eb-3318-49f5-8eb4-f52362b14aca",
-    "30422eff-6f08-4f5d-bf75-c3952aa9bee0",
-    "7ea94e5e-9879-4827-8599-91b56543c771",
-    "b441b9c7-9b30-4dd4-8fd4-293c38606407",
-    "ab8a837a-b159-4883-83ec-1802bd951cc3",
-    "499ea5c7-a060-47be-a032-c7f5506e2d6d",
-    "647c5c10-d812-4166-a409-c561e4ad9807",
-    "340edf4c-6d8e-4011-b4cf-3b4d9be7ead0",
-    "b6c7f102-12bb-4943-b255-93536c8b17c6",
-    "9282853f-0575-4b04-81a6-732cf54a84ff",
-    "d37b0ffd-89e9-476a-b4f0-807bcbd10573",
-    "a09d58c2-3292-4907-b22e-f5eb5ae14187",
-    "a427ee66-c52c-4c77-9415-12da2558d7de",
-    "28e250cc-d164-4805-be2f-82f929d37c7d",
-    "ec3ac24c-857f-4dc9-acdb-7f2f8b43850b",
-    "77849d1b-54fe-47b7-93c8-0948f5059d8c",
-    "3fa4b506-f2a4-487c-882b-93921badb48c",
-    "d94485b2-09a8-4909-85b4-f5f944da67b5",
     "680ff500-9207-4dfa-8bc3-dc2f59147c8d",
-    "7efd2c64-a82c-44e8-9877-0c86dccd5fbc",
-    "76de325d-da78-4d45-8329-b4fbe7c82b3c",
-    "8d6ab3d8-670c-4fec-baf9-6f8912e94317",
-    "e07a7599-1e8d-4785-b5b1-17eab8b83989",
-    "12acb16f-adff-423d-933e-eb69c0a19fd9",
-    "2e14d865-f9d2-4d26-a7fd-be4168a2ac45",
+    "340edf4c-6d8e-4011-b4cf-3b4d9be7ead0",
     "a355fab8-f8bf-40f8-8467-c515f4a8f881",
-    "b85f0e4d-5561-4dcf-813e-473df6098320",
+    "5853acbc-070f-4bc7-97d2-b3d09803589d",
     "a8f78a42-06c4-4e82-adca-9ceb0d30f4ce",
-    "7b7ff66f-445f-44ab-a8f4-8c5bb13b29db"
+    "c5df9d2f-0fd2-467c-afc8-dfde6d82f486",
+    "e07a7599-1e8d-4785-b5b1-17eab8b83989",
+    "a09d58c2-3292-4907-b22e-f5eb5ae14187",
+    "a087a89f-0fe9-4974-94c9-61731df06e18",
+    "d37b0ffd-89e9-476a-b4f0-807bcbd10573",
+    "8d6ab3d8-670c-4fec-baf9-6f8912e94317",
+    "d94485b2-09a8-4909-85b4-f5f944da67b5",
+    "3fa4b506-f2a4-487c-882b-93921badb48c",
+    "7efd2c64-a82c-44e8-9877-0c86dccd5fbc",
+    "30422eff-6f08-4f5d-bf75-c3952aa9bee0",
+    "b441b9c7-9b30-4dd4-8fd4-293c38606407",
+    "b85f0e4d-5561-4dcf-813e-473df6098320",
+    "12acb16f-adff-423d-933e-eb69c0a19fd9",
+    "eefcc932-52a4-4f1d-a4ff-3d01f590a4bb",
+    "ab8a837a-b159-4883-83ec-1802bd951cc3",
+    "7b7ff66f-445f-44ab-a8f4-8c5bb13b29db",
+    "647c5c10-d812-4166-a409-c561e4ad9807",
+    "0df11ff3-cfa7-4abd-93a0-597a198f3a0c",
+    "8c5447eb-3318-49f5-8eb4-f52362b14aca",
+    "09426bee-d78d-45d5-8d3b-f6685f7a05bf",
+    "b6c7f102-12bb-4943-b255-93536c8b17c6",
+    "ec3ac24c-857f-4dc9-acdb-7f2f8b43850b",
+    "765852f7-fb93-4b2a-89c0-a2d2c56513d1",
+    "7ea94e5e-9879-4827-8599-91b56543c771",
+    "a229682a-5081-48db-95cc-cf659f7d21cd",
+    "499ea5c7-a060-47be-a032-c7f5506e2d6d",
+    "9282853f-0575-4b04-81a6-732cf54a84ff",
+    "28e250cc-d164-4805-be2f-82f929d37c7d",
+    "2e14d865-f9d2-4d26-a7fd-be4168a2ac45",
+    "5b3325c2-6428-470d-bc55-b5d5c61ff5d7",
+    "77849d1b-54fe-47b7-93c8-0948f5059d8c",
+    "76de325d-da78-4d45-8329-b4fbe7c82b3c",
+    "a427ee66-c52c-4c77-9415-12da2558d7de"
   ],
-  "pqActions": 33,
+  "pqActions": 35,
   "newTickets": 23,
-  "total": 56,
+  "total": 58,
   "typeBreakdown": [
     {
       "type": "marked_solved",
-      "count": 15
+      "count": 16
     },
     {
       "type": "false_positive",
@@ -62,16 +62,16 @@
       "count": 5
     },
     {
+      "type": "clear_and_enable_all",
+      "count": 4
+    },
+    {
       "type": "email_merchant",
       "count": 4
     },
     {
       "type": "reject_shopify_payments",
       "count": 4
-    },
-    {
-      "type": "clear_and_enable_all",
-      "count": 3
     },
     {
       "type": "content_removal_and_enable_payouts",
@@ -99,8 +99,8 @@
     },
     {
       "type": "still_open",
-      "count": 5
+      "count": 3
     }
   ],
-  "updatedAt": "2026-05-03T00:05:17Z"
+  "updatedAt": "2026-05-03T00:09:26Z"
 }
